@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor & Brasa — Restaurante Grill</title>
+  <meta name="description" content="Sabor & Brasa: cocina a la brasa de autor en el corazón de la ciudad. Carnes y pescados a la leña, carta de temporada y ambiente único. Reserva tu mesa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Portfolio ribbon -->
+<a class="portfolio-ribbon" href="../../index.html">
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+  <span>Sitio de <b>demostración</b> · Portafolio de César Hernández</span>
+</a>
+
+<!-- Skip link -->
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner" id="site-header">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="logo" aria-label="Sabor & Brasa — Inicio">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" stroke="#e0a75e" stroke-width="1.5"/>
+          <path d="M12 26 C12 20 10 17 10 13 C10 9 13 7 16 8 C14 11 15 14 18 14 C21 14 22 11 20 8 C23 7 26 9 26 13 C26 17 24 20 24 26" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <path d="M14 26 L22 26" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M15 22 C15 20 14 18 14 16" stroke="#f4c988" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+          <path d="M18 23 C18 20 17 17 17 14.5" stroke="#f4c988" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+          <path d="M21 22 C21 20 22 18 22 16" stroke="#f4c988" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+        <div class="logo-text">
+          Sabor &amp; Brasa
+          <em>Cocina a la leña</em>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#ambiente">Ambiente</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="#reservas" class="btn btn-primary header-cta">Reservar mesa</a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil" role="navigation">
+    <a href="#menu" class="mobile-nav-link">Menú</a>
+    <a href="#ambiente" class="mobile-nav-link">Ambiente</a>
+    <a href="#reservas" class="mobile-nav-link">Reservas</a>
+    <a href="#contacto" class="mobile-nav-link">Contacto</a>
+    <a href="#reservas" class="btn btn-primary">Reservar mesa</a>
+  </nav>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero" aria-label="Bienvenida">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-embers" aria-hidden="true">
+      <div class="ember"></div>
+      <div class="ember"></div>
+      <div class="ember"></div>
+      <div class="ember"></div>
+      <div class="ember"></div>
+      <div class="ember"></div>
+      <div class="ember"></div>
+      <div class="ember"></div>
+    </div>
+
+    <div class="container">
+      <!-- Left: content -->
+      <div class="hero-content">
+
+        <div class="hero-badge" role="status" aria-live="polite">
+          Abierto hoy &nbsp;·&nbsp; 12:00 – 23:00
+        </div>
+
+        <h1 class="hero-title">
+          Cocina a la <em>brasa</em>,<br>sabor de verdad
+        </h1>
+
+        <p class="hero-sub">
+          Cada corte es una historia. Usamos leña de encina, ingredientes de temporada y una pasión por el fuego que se nota en cada bocado.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#reservas" class="btn btn-primary">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Reservar mesa
+          </a>
+          <a href="#menu" class="btn btn-outline">Ver menú</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>12+</strong>
+            <span>Años de brasa</span>
+          </div>
+          <div class="hero-stat">
+            <strong>4.9</strong>
+            <span>Valoración media</span>
+          </div>
+          <div class="hero-stat">
+            <strong>18</strong>
+            <span>Platos de temporada</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: visual (desktop only) -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-card visual-card-main">
+          <!-- Flame / grill SVG illustration -->
+          <svg width="100" height="120" viewBox="0 0 100 120" fill="none" aria-hidden="true">
+            <!-- Grill grate -->
+            <rect x="15" y="82" width="70" height="6" rx="3" fill="#3a2010" stroke="#5a3018" stroke-width="1"/>
+            <line x1="25" y1="82" x2="25" y2="88" stroke="#6a4020" stroke-width="2"/>
+            <line x1="38" y1="82" x2="38" y2="88" stroke="#6a4020" stroke-width="2"/>
+            <line x1="51" y1="82" x2="51" y2="88" stroke="#6a4020" stroke-width="2"/>
+            <line x1="64" y1="82" x2="64" y2="88" stroke="#6a4020" stroke-width="2"/>
+            <line x1="77" y1="82" x2="77" y2="88" stroke="#6a4020" stroke-width="2"/>
+            <!-- Meat on grill -->
+            <ellipse cx="50" cy="80" rx="28" ry="8" fill="#5a2810" stroke="#7a3818" stroke-width="1.5"/>
+            <path d="M30 78 Q40 74 50 76 Q60 74 70 78" stroke="#8a4820" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <!-- Grill marks -->
+            <path d="M36 76 L36 82" stroke="#2a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <path d="M44 75 L44 81" stroke="#2a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <path d="M52 75 L52 81" stroke="#2a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <path d="M60 76 L60 82" stroke="#2a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <!-- Flames left -->
+            <path d="M28 80 C26 70 30 64 28 55 C26 46 22 44 25 38 C28 32 32 35 30 42 C35 36 34 28 38 24 C40 32 36 38 39 45 C42 38 44 32 47 28 C47 38 43 44 46 52 C48 44 52 38 54 32 C54 44 50 50 52 58 C56 48 60 42 62 36 C62 46 58 52 60 58 C64 50 68 44 70 38 C70 48 66 54 68 62 C72 54 74 48 76 42 C74 52 70 58 72 66 C70 74 68 78 72 82" stroke="none" fill="none"/>
+            <!-- Main flame group -->
+            <path d="M50 76 C48 66 44 60 46 50 C48 40 52 36 50 28 C54 34 56 42 53 50 C57 42 60 34 62 26 C62 38 58 46 60 56 C64 46 68 40 70 32 C68 44 64 52 66 62 C70 52 74 46 76 40 C72 54 68 60 70 70 C66 62 62 72 64 80" fill="#c0451a" opacity="0.7"/>
+            <path d="M50 76 C47 64 42 56 44 44 C46 34 50 28 48 18 C52 26 55 34 52 44 C56 34 60 26 62 18 C60 32 56 40 58 52 C62 40 67 32 70 24 C67 38 62 46 64 58 C68 46 73 38 75 30 C71 46 67 54 68 66" fill="#e05a26" opacity="0.5"/>
+            <path d="M50 76 C49 68 46 62 48 54 C50 46 53 40 52 32 C55 40 56 48 54 56 C57 48 60 42 62 36 C60 48 56 54 57 64" fill="#f4a030" opacity="0.5"/>
+            <!-- Embers below -->
+            <circle cx="30" cy="91" r="2" fill="#c0451a" opacity="0.7"/>
+            <circle cx="50" cy="93" r="2.5" fill="#e05a26" opacity="0.6"/>
+            <circle cx="70" cy="91" r="2" fill="#c0451a" opacity="0.7"/>
+            <circle cx="40" cy="95" r="1.5" fill="#f4a030" opacity="0.5"/>
+            <circle cx="62" cy="95" r="1.5" fill="#f4a030" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="visual-card-row">
+          <div class="visual-card visual-card-sm">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+              <path d="M10 38 C10 28 8 22 10 14 C12 8 18 6 22 8 C19 12 20 16 23 18 C26 16 27 12 24 8 C28 6 34 8 36 14 C38 22 36 28 36 38" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <line x1="14" y1="38" x2="38" y2="38" stroke="#e0a75e" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="26" cy="20" r="3" fill="#f4c988" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="visual-card visual-card-sm">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+              <circle cx="26" cy="26" r="16" stroke="#e0a75e" stroke-width="1.5" fill="none"/>
+              <path d="M18 22 Q26 16 34 22 Q26 28 18 22Z" fill="#e0a75e" opacity="0.3"/>
+              <path d="M16 26 Q26 20 36 26 Q26 32 16 26Z" fill="#f4c988" opacity="0.25"/>
+              <circle cx="26" cy="26" r="4" fill="#e0a75e" opacity="0.4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLATOS DESTACADOS ===== -->
+  <section class="menu-section" id="menu" aria-labelledby="menu-title">
+    <div class="container">
+      <div class="menu-header">
+        <span class="section-label">Carta de temporada</span>
+        <div class="divider"></div>
+        <h2 class="section-title" id="menu-title">Platos que enamoran</h2>
+        <p class="section-sub">Ingredientes seleccionados, fuego controlado y una técnica que se aprende con los años. Nuestra carta cambia con las estaciones.</p>
+      </div>
+
+      <div class="dishes-grid">
+
+        <!-- Plato 1 -->
+        <article class="dish-card">
+          <div class="dish-thumb dish-thumb-1">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <ellipse cx="32" cy="38" rx="22" ry="10" fill="#7a3010" stroke="#9a4820" stroke-width="1.5"/>
+              <path d="M14 36 Q18 30 26 32 Q32 28 38 32 Q46 30 50 36" stroke="#c06030" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <path d="M20 34 L20 39" stroke="#3a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+              <path d="M28 33 L28 39" stroke="#3a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+              <path d="M36 33 L36 39" stroke="#3a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+              <path d="M44 34 L44 39" stroke="#3a1008" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+              <path d="M24 32 C22 24 26 18 24 12 C28 18 26 24 28 30" fill="#e05a26" opacity="0.6"/>
+              <path d="M36 30 C34 22 38 16 36 10 C40 16 38 22 40 28" fill="#f4a030" opacity="0.5"/>
+            </svg>
+            <span class="dish-badge badge-signature">Firma</span>
+          </div>
+          <div class="dish-body">
+            <h3 class="dish-name">Chuletón de Buey a la Leña</h3>
+            <p class="dish-desc">1 kg de chuletón madurado 45 días, brasa de encina, sal de Añana y hierbas aromáticas de temporada.</p>
+            <div class="dish-footer">
+              <div class="dish-price">
+                58,00 €
+                <small>por persona</small>
+              </div>
+              <span class="dish-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ~40 min
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 2 -->
+        <article class="dish-card">
+          <div class="dish-thumb dish-thumb-2">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <ellipse cx="32" cy="36" rx="20" ry="9" fill="#5a4010" stroke="#7a5820" stroke-width="1.5"/>
+              <path d="M18 34 Q24 28 32 30 Q40 28 46 34" stroke="#a08040" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              <circle cx="22" cy="33" r="3" fill="#8a6030" opacity="0.6"/>
+              <circle cx="32" cy="31" r="3.5" fill="#9a7040" opacity="0.6"/>
+              <circle cx="42" cy="33" r="3" fill="#8a6030" opacity="0.6"/>
+              <path d="M28 26 C27 18 30 14 28 8 C31 14 30 20 32 24" fill="#e0a75e" opacity="0.4"/>
+            </svg>
+            <span class="dish-badge badge-popular">Popular</span>
+          </div>
+          <div class="dish-body">
+            <h3 class="dish-name">Secreto Ibérico a la Brasa</h3>
+            <p class="dish-desc">Secreto de cerdo ibérico de bellota, ahumado lento con romero y servido con patatas a lo pobre y alioli de trufa.</p>
+            <div class="dish-footer">
+              <div class="dish-price">
+                26,50 €
+                <small>ración</small>
+              </div>
+              <span class="dish-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ~30 min
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 3 -->
+        <article class="dish-card">
+          <div class="dish-thumb dish-thumb-3">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <!-- Fish shape -->
+              <path d="M10 32 C14 24 22 20 32 20 C42 20 50 24 54 32 C50 40 42 44 32 44 C22 44 14 40 10 32Z" fill="#3a4060" stroke="#5a6080" stroke-width="1.5"/>
+              <path d="M54 32 L60 26 L58 32 L60 38 Z" fill="#3a4060" stroke="#5a6080" stroke-width="1"/>
+              <circle cx="18" cy="30" r="2" fill="#8090b0" opacity="0.7"/>
+              <path d="M22 26 Q32 22 42 26" stroke="#6070a0" stroke-width="1" stroke-linecap="round"/>
+              <path d="M22 38 Q32 42 42 38" stroke="#6070a0" stroke-width="1" stroke-linecap="round"/>
+              <!-- Grill marks on fish -->
+              <path d="M28 22 L26 42" stroke="#1a2030" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+              <path d="M36 22 L34 42" stroke="#1a2030" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+            <span class="dish-badge badge-new">Nuevo</span>
+          </div>
+          <div class="dish-body">
+            <h3 class="dish-name">Lubina Salvaje a la Plancha</h3>
+            <p class="dish-desc">Lubina del Atlántico entera, plancha de hierro fundido, mantequilla de algas, limón confitado y berros.</p>
+            <div class="dish-footer">
+              <div class="dish-price">
+                34,00 €
+                <small>por persona</small>
+              </div>
+              <span class="dish-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ~25 min
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 4 -->
+        <article class="dish-card">
+          <div class="dish-thumb dish-thumb-4">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <!-- Skewer -->
+              <line x1="12" y1="52" x2="52" y2="12" stroke="#8a5a20" stroke-width="3" stroke-linecap="round"/>
+              <!-- Meat chunks -->
+              <rect x="16" y="34" width="12" height="12" rx="3" fill="#7a3010" stroke="#9a4820" stroke-width="1" transform="rotate(-45 22 40)"/>
+              <rect x="28" y="22" width="12" height="12" rx="3" fill="#6a2808" stroke="#8a3818" stroke-width="1" transform="rotate(-45 34 28)"/>
+              <rect x="36" y="14" width="10" height="10" rx="2.5" fill="#7a3010" stroke="#9a4820" stroke-width="1" transform="rotate(-45 41 19)"/>
+              <!-- Pepper between -->
+              <circle cx="30" cy="34" r="4" fill="#3a7020" stroke="#4a8030" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="dish-body">
+            <h3 class="dish-name">Brocheta de Ternera y Verduras</h3>
+            <p class="dish-desc">Dados de ternera adobada con especias del Mediterráneo, pimiento asado, cebolleta y salsa chimichurri.</p>
+            <div class="dish-footer">
+              <div class="dish-price">
+                18,50 €
+                <small>2 brochetas</small>
+              </div>
+              <span class="dish-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ~20 min
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 5 -->
+        <article class="dish-card">
+          <div class="dish-thumb dish-thumb-5">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <!-- Bowl -->
+              <path d="M12 30 Q12 48 32 48 Q52 48 52 30 Z" fill="#3a2010" stroke="#5a3820" stroke-width="1.5"/>
+              <ellipse cx="32" cy="30" rx="20" ry="6" fill="#2a1808" stroke="#4a2818" stroke-width="1.5"/>
+              <!-- Soup surface -->
+              <ellipse cx="32" cy="30" rx="18" ry="5" fill="#5a2010" opacity="0.8"/>
+              <!-- Garnish dots -->
+              <circle cx="26" cy="29" r="2" fill="#e0a75e" opacity="0.7"/>
+              <circle cx="34" cy="28" r="1.5" fill="#f4c988" opacity="0.6"/>
+              <circle cx="40" cy="30" r="2" fill="#e0a75e" opacity="0.7"/>
+              <!-- Steam -->
+              <path d="M28 22 C27 18 29 15 28 11" stroke="#b8a894" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+              <path d="M36 21 C35 17 37 14 36 10" stroke="#b8a894" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="dish-body">
+            <h3 class="dish-name">Sopa de Cebolla Gratinada</h3>
+            <p class="dish-desc">Cebolla caramelizada lentamente, caldo de buey artesanal, pan de masa madre y queso Comté al gratén.</p>
+            <div class="dish-footer">
+              <div class="dish-price">
+                12,00 €
+                <small>primer plato</small>
+              </div>
+              <span class="dish-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ~15 min
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 6 -->
+        <article class="dish-card">
+          <div class="dish-thumb dish-thumb-6">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <!-- Dessert glass -->
+              <path d="M24 44 L20 54 L44 54 L40 44 Z" fill="#2a2010" stroke="#4a3820" stroke-width="1.5"/>
+              <line x1="20" y1="54" x2="44" y2="54" stroke="#4a3820" stroke-width="2" stroke-linecap="round"/>
+              <!-- Glass bowl -->
+              <path d="M18 22 Q18 44 32 44 Q46 44 46 22 Z" fill="#3a2810" stroke="#5a4020" stroke-width="1.5"/>
+              <ellipse cx="32" cy="22" rx="14" ry="5" fill="#2a1808" stroke="#4a3018" stroke-width="1.5"/>
+              <!-- Chocolate top -->
+              <ellipse cx="32" cy="22" rx="12" ry="4" fill="#1a0e06" opacity="0.9"/>
+              <!-- Caramel drizzle -->
+              <path d="M22 26 Q26 30 32 28 Q38 26 42 30" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+              <!-- Gold leaf accent -->
+              <circle cx="32" cy="20" r="2" fill="#f4c988" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="dish-body">
+            <h3 class="dish-name">Fondant de Chocolate con Caramelo</h3>
+            <p class="dish-desc">Fondant de chocolate 70%, centro líquido de caramelo salado, helado de vainilla de Madagascar y oro alimentario.</p>
+            <div class="dish-footer">
+              <div class="dish-price">
+                9,50 €
+                <small>postre</small>
+              </div>
+              <span class="dish-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ~12 min
+              </span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /dishes-grid -->
+    </div>
+  </section>
+
+  <!-- ===== AMBIENTE ===== -->
+  <section class="ambiente-section" id="ambiente" aria-labelledby="ambiente-title">
+    <div class="container">
+      <div class="ambiente-grid">
+
+        <!-- Text -->
+        <div class="ambiente-text">
+          <span class="section-label">Sobre nosotros</span>
+          <div class="divider"></div>
+          <h2 class="section-title" id="ambiente-title">Donde el fuego<br>crea momentos</h2>
+          <p class="section-sub">
+            Nacimos en 2012 con una idea sencilla: que la cocina de verdad huele a leña, a tiempo y a dedicación. Nuestro asador ocupa una antigua bodega del siglo XIX, con bóvedas de piedra, luz cálida y el aroma constante de la brasa.
+          </p>
+          <p class="section-sub" style="margin-top:16px;">
+            El equipo de sala lleva un promedio de 8 años con nosotros. No somos un restaurante de tendencias; somos un lugar al que se vuelve.
+          </p>
+          <div class="ambiente-features">
+            <div class="ambiente-feature">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="feature-body">
+                <strong>Ingredientes de origen trazable</strong>
+                <p>Trabajamos con productores locales de Castilla, Galicia y el Levante. Cada proveedor tiene nombre y cara.</p>
+              </div>
+            </div>
+            <div class="ambiente-feature">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="feature-body">
+                <strong>Equipo con historia</strong>
+                <p>Nuestro chef, Andrés Morate, formado en San Sebastián, lleva 10 años construyendo esta carta plato a plato.</p>
+              </div>
+            </div>
+            <div class="ambiente-feature">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div class="feature-body">
+                <strong>Sala para eventos privados</strong>
+                <p>Capacidad para 20 personas en sala privada. Menús degustación a medida para celebraciones y comidas de empresa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="ambiente-visual" aria-hidden="true">
+          <div class="amb-tile amb-tile-tall amb-tile-1">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+              <path d="M20 60 C20 45 16 36 20 24 C24 14 32 10 38 12 C34 18 35 26 40 28 C45 26 46 18 42 12 C48 10 56 14 60 24 C64 36 60 45 60 60" stroke="#e0a75e" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+              <path d="M25 60 C25 50 22 42 25 33 C27 24 33 20 38 22 C36 26 37 30 40 31 C43 30 44 26 42 22 C47 20 53 24 55 33 C58 42 55 50 55 60" fill="#c0451a" opacity="0.3"/>
+              <path d="M30 60 C30 52 28 46 30 38 C32 30 37 26 40 28 C38 32 39 36 40 38 C41 36 42 32 40 28 C43 26 48 30 50 38 C52 46 50 52 50 60" fill="#e0a75e" opacity="0.3"/>
+              <line x1="16" y1="62" x2="64" y2="62" stroke="#e0a75e" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="amb-tile amb-tile-2">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+              <circle cx="30" cy="30" r="20" stroke="#e0a75e" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <circle cx="30" cy="30" r="12" stroke="#f4c988" stroke-width="1" fill="none" opacity="0.4"/>
+              <circle cx="30" cy="30" r="4" fill="#e0a75e" opacity="0.5"/>
+              <path d="M10 30 L50 30" stroke="#e0a75e" stroke-width="1" opacity="0.3"/>
+              <path d="M30 10 L30 50" stroke="#e0a75e" stroke-width="1" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="amb-tile amb-tile-3">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+              <rect x="10" y="20" width="40" height="30" rx="3" stroke="#e0a75e" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <path d="M10 28 L50 28" stroke="#e0a75e" stroke-width="1" opacity="0.3"/>
+              <circle cx="18" cy="24" r="2" fill="#e0a75e" opacity="0.5"/>
+              <circle cx="25" cy="24" r="2" fill="#f4c988" opacity="0.4"/>
+              <circle cx="32" cy="24" r="2" fill="#c0451a" opacity="0.5"/>
+              <path d="M16 35 L26 35" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              <path d="M16 42 L35 42" stroke="#7a6d61" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="galeria-section" id="galeria" aria-labelledby="galeria-title">
+    <div class="container">
+      <div class="galeria-header">
+        <span class="section-label">Galería</span>
+        <div class="divider"></div>
+        <h2 class="section-title" id="galeria-title">La atmósfera que nos define</h2>
+      </div>
+      <div class="gallery-grid" role="list">
+        <div class="gallery-tile gt-1" role="listitem" data-label="Sala principal" aria-label="Sala principal del restaurante">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+            <path d="M10 45 L10 20 L30 10 L50 20 L50 45 Z" stroke="#e0a75e" stroke-width="1.5" fill="none" opacity="0.35"/>
+            <path d="M20 45 L20 30 Q20 26 24 26 L36 26 Q40 26 40 30 L40 45" stroke="#f4c988" stroke-width="1.2" fill="none" opacity="0.35"/>
+            <circle cx="30" cy="18" r="3" fill="#e0a75e" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="gallery-tile gt-2" role="listitem" data-label="La brasa" aria-label="La brasa del restaurante">
+          <svg width="50" height="60" viewBox="0 0 50 60" fill="none" aria-hidden="true">
+            <path d="M25 48 C23 38 19 32 21 22 C23 12 28 8 25 2 C29 8 31 16 28 24 C32 16 35 8 36 2 C35 14 31 20 33 30 C37 20 41 14 42 8 C39 22 35 28 36 38" fill="#c0451a" opacity="0.45"/>
+            <path d="M25 48 C24 40 22 34 23 26 C24 18 27 14 26 8 C28 14 29 22 27 28 C30 22 32 16 33 10 C31 22 28 28 29 36" fill="#f4a030" opacity="0.35"/>
+            <line x1="14" y1="50" x2="36" y2="50" stroke="#e0a75e" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="gallery-tile gt-3" role="listitem" data-label="La bodega" aria-label="La bodega de vinos">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+            <rect x="16" y="8" width="20" height="36" rx="10" stroke="#e0a75e" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <ellipse cx="26" cy="28" rx="7" ry="10" fill="#4a2060" opacity="0.35"/>
+            <path d="M22 8 L30 8" stroke="#e0a75e" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <path d="M24 6 L24 10 M28 6 L28 10" stroke="#7a5a20" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="gallery-tile gt-4" role="listitem" data-label="Terraza" aria-label="Terraza exterior">
+          <svg width="56" height="52" viewBox="0 0 56 52" fill="none" aria-hidden="true">
+            <path d="M8 28 L28 8 L48 28" stroke="#e0a75e" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <circle cx="28" cy="22" r="10" stroke="#f4c988" stroke-width="1.2" fill="none" opacity="0.35"/>
+            <line x1="14" y1="44" x2="42" y2="44" stroke="#e0a75e" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+            <line x1="18" y1="28" x2="18" y2="44" stroke="#7a6d61" stroke-width="1.5" opacity="0.35"/>
+            <line x1="38" y1="28" x2="38" y2="44" stroke="#7a6d61" stroke-width="1.5" opacity="0.35"/>
+          </svg>
+        </div>
+        <div class="gallery-tile gt-5" role="listitem" data-label="La cocina" aria-label="La cocina abierta">
+          <svg width="60" height="52" viewBox="0 0 60 52" fill="none" aria-hidden="true">
+            <rect x="8" y="30" width="44" height="14" rx="2" stroke="#e0a75e" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <circle cx="18" cy="24" r="7" stroke="#e0a75e" stroke-width="1.5" fill="none" opacity="0.35"/>
+            <circle cx="35" cy="20" r="9" stroke="#f4c988" stroke-width="1.2" fill="none" opacity="0.35"/>
+            <path d="M16 22 Q18 17 22 22" stroke="#c0451a" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <path d="M32 18 Q35 12 38 18" stroke="#e05a26" stroke-width="1.5" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="gallery-tile gt-6" role="listitem" data-label="Postres" aria-label="Mesa de postres">
+          <svg width="50" height="52" viewBox="0 0 50 52" fill="none" aria-hidden="true">
+            <path d="M15 42 L10 48 L40 48 L35 42 Z" fill="#2a1808" stroke="#4a3018" stroke-width="1" opacity="0.6"/>
+            <path d="M12 18 Q12 42 25 42 Q38 42 38 18 Z" fill="#3a2010" stroke="#5a3820" stroke-width="1.5" opacity="0.5"/>
+            <ellipse cx="25" cy="18" rx="13" ry="5" fill="#2a1408" stroke="#4a2818" stroke-width="1.5" opacity="0.6"/>
+            <ellipse cx="25" cy="17" rx="11" ry="4" fill="#1a0e06" opacity="0.6"/>
+            <path d="M16 22 Q25 18 34 22" stroke="#e0a75e" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <circle cx="25" cy="15" r="2" fill="#f4c988" opacity="0.7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORARIO + UBICACIÓN ===== -->
+  <section class="info-section" id="contacto" aria-labelledby="info-title">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:52px;">
+        <span class="section-label">Visítanos</span>
+        <div class="divider" style="margin-inline:auto;"></div>
+        <h2 class="section-title" id="info-title">Horario y ubicación</h2>
+      </div>
+
+      <div class="info-grid">
+
+        <!-- Horario -->
+        <div class="info-card">
+          <h3 class="info-card-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Horario de apertura
+          </h3>
+          <table class="schedule-table" aria-label="Horario semanal">
+            <tbody>
+              <tr>
+                <td>Lunes</td>
+                <td><span class="closed-tag">Cerrado</span></td>
+              </tr>
+              <tr>
+                <td>Martes – Jueves</td>
+                <td>13:00 – 16:00 · 20:00 – 23:00</td>
+              </tr>
+              <tr class="today">
+                <td>Viernes</td>
+                <td>12:00 – 17:00 · 20:00 – 23:30</td>
+              </tr>
+              <tr class="today">
+                <td>Sábado</td>
+                <td>12:00 – 23:30</td>
+              </tr>
+              <tr>
+                <td>Domingo</td>
+                <td>12:00 – 17:00</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="contact-links">
+            <a href="#" class="contact-link">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +00 912 345 678
+            </a>
+            <a href="#" class="contact-link">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              hola@saborybrasa.es
+            </a>
+          </div>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="info-card">
+          <h3 class="info-card-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Cómo llegar
+          </h3>
+          <div class="map-address">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="map-address-text">
+              <strong>Av. Central 123, Planta Baja</strong>
+              <p>28001 Madrid, España<br>Entre las calles del Roble y Serrano</p>
+            </div>
+          </div>
+
+          <!-- Mapa SVG estilizado -->
+          <div class="map-card" aria-label="Mapa ilustrativo de la ubicación (no interactivo)">
+            <svg width="100%" height="100%" viewBox="0 0 340 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <!-- Grid de calles -->
+              <rect width="340" height="180" fill="#1a1510"/>
+              <!-- Manzanas (bloques ciudad) -->
+              <rect x="10" y="10" width="60" height="40" rx="3" fill="#231e1a"/>
+              <rect x="80" y="10" width="80" height="40" rx="3" fill="#231e1a"/>
+              <rect x="170" y="10" width="50" height="40" rx="3" fill="#231e1a"/>
+              <rect x="230" y="10" width="100" height="40" rx="3" fill="#231e1a"/>
+              <rect x="10" y="60" width="40" height="60" rx="3" fill="#231e1a"/>
+              <rect x="60" y="60" width="90" height="60" rx="3" fill="#231e1a"/>
+              <rect x="160" y="60" width="70" height="60" rx="3" fill="#231e1a"/>
+              <rect x="240" y="60" width="90" height="60" rx="3" fill="#231e1a"/>
+              <rect x="10" y="130" width="70" height="40" rx="3" fill="#231e1a"/>
+              <rect x="90" y="130" width="50" height="40" rx="3" fill="#231e1a"/>
+              <rect x="150" y="130" width="80" height="40" rx="3" fill="#231e1a"/>
+              <rect x="240" y="130" width="90" height="40" rx="3" fill="#231e1a"/>
+              <!-- Calles (líneas) -->
+              <line x1="0" y1="55" x2="340" y2="55" stroke="#2a2420" stroke-width="4"/>
+              <line x1="0" y1="125" x2="340" y2="125" stroke="#2a2420" stroke-width="4"/>
+              <line x1="55" y1="0" x2="55" y2="180" stroke="#2a2420" stroke-width="4"/>
+              <line x1="160" y1="0" x2="160" y2="180" stroke="#2a2420" stroke-width="5"/>
+              <line x1="235" y1="0" x2="235" y2="180" stroke="#2a2420" stroke-width="4"/>
+              <!-- Av. Central (calle destacada) -->
+              <rect x="150" y="50" width="20" height="80" fill="#312a24"/>
+              <!-- Pin de ubicación -->
+              <circle cx="162" cy="88" r="14" fill="rgba(192,69,26,0.25)" stroke="none"/>
+              <circle cx="162" cy="88" r="8" fill="#c0451a"/>
+              <circle cx="162" cy="88" r="4" fill="#f4c988"/>
+              <!-- Label Av. Central -->
+              <text x="164" y="100" font-size="6" fill="#7a6d61" font-family="system-ui">Av. Central</text>
+              <!-- Brújula decorativa -->
+              <circle cx="316" cy="160" r="14" fill="#231e1a" stroke="#3a3028" stroke-width="1"/>
+              <text x="316" y="156" font-size="7" fill="#7a6d61" text-anchor="middle" font-family="system-ui">N</text>
+              <line x1="316" y1="150" x2="316" y2="158" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="316" y1="162" x2="316" y2="170" stroke="#3a3028" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="contact-links" style="margin-top:20px;">
+            <a href="#" class="contact-link">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVAS ===== -->
+  <section class="reservas-section" id="reservas" aria-labelledby="reservas-title">
+    <div class="container">
+      <div class="reservas-inner">
+        <span class="section-label">Reserva tu mesa</span>
+        <div class="divider"></div>
+        <h2 class="section-title" id="reservas-title">Te esperamos</h2>
+        <p class="section-sub">Garantiza tu mesa con antelación. Nuestro equipo te confirmará la reserva por teléfono o email en menos de 24 horas.</p>
+
+        <form class="reserva-form" id="reserva-form" novalidate aria-label="Formulario de reserva de mesa">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="r-nombre">Nombre completo</label>
+              <input type="text" id="r-nombre" name="nombre" placeholder="Ej. Ana García" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="r-personas">Número de personas</label>
+              <select id="r-personas" name="personas" required>
+                <option value="" disabled selected>Selecciona</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7-10">7 – 10 personas</option>
+                <option value="grupo">Grupo (más de 10)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="r-fecha">Fecha deseada</label>
+              <input type="date" id="r-fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="r-hora">Hora</label>
+              <select id="r-hora" name="hora" required>
+                <option value="" disabled selected>Selecciona</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="r-telefono">Teléfono de contacto</label>
+              <input type="tel" id="r-telefono" name="telefono" placeholder="+00 000 000 000" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="r-notas">Observaciones (opcional)</label>
+              <input type="text" id="r-notas" name="notas" placeholder="Alergias, ocasión especial…">
+            </div>
+          </div>
+          <p class="form-note">Al enviar aceptas que nos pongamos en contacto contigo para confirmar la disponibilidad. Sin compromiso.</p>
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Enviar solicitud
+            </button>
+            <span style="font-size:0.8rem; color:var(--text-faint);">Respuesta en menos de 24 h</span>
+          </div>
+
+          <div class="form-success" id="form-success" role="alert" aria-live="polite">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            ¡Gracias! Te contactaremos para confirmar tu reserva.
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="Sabor & Brasa — Inicio">
+          <svg class="logo-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <circle cx="18" cy="18" r="17" stroke="#e0a75e" stroke-width="1.5"/>
+            <path d="M12 26 C12 20 10 17 10 13 C10 9 13 7 16 8 C14 11 15 14 18 14 C21 14 22 11 20 8 C23 7 26 9 26 13 C26 17 24 20 24 26" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <path d="M14 26 L22 26" stroke="#e0a75e" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <div class="logo-text">
+            Sabor &amp; Brasa
+            <em>Cocina a la leña</em>
+          </div>
+        </a>
+        <p>Restaurante asador en el corazón de Madrid. Desde 2012, cocina honesta al fuego de encina.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram de Sabor & Brasa">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Facebook de Sabor & Brasa">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="TripAdvisor de Sabor & Brasa">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="14" r="4"/><circle cx="16" cy="14" r="4"/><path d="M4 7h16M7 7 5 3h14l-2 4"/><circle cx="8" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="14" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <div class="footer-col">
+        <h4>Restaurante</h4>
+        <ul>
+          <li><a href="#menu">Carta</a></li>
+          <li><a href="#ambiente">Nuestra historia</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+        </ul>
+      </div>
+
+      <!-- Carta -->
+      <div class="footer-col">
+        <h4>Especialidades</h4>
+        <ul>
+          <li><a href="#menu">Carnes a la brasa</a></li>
+          <li><a href="#menu">Pescados a la plancha</a></li>
+          <li><a href="#menu">Primeros platos</a></li>
+          <li><a href="#menu">Postres de autor</a></li>
+          <li><a href="#menu">Menú degustación</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Av. Central 123, Madrid 28001
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +00 912 345 678
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          hola@saborybrasa.es
+        </div>
+        <div class="footer-contact-item" style="margin-top:4px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mar–Dom: ver horario completo
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Sabor &amp; Brasa. Todos los derechos reservados.</p>
+      <span class="footer-demo-tag">Sitio de demostración creado por <a href="../../index.html">César Hernández</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JS inline (mínimo, sin librerías) ===== -->
+<script>
+(function () {
+  'use strict';
+
+  /* --- Header scroll shadow --- */
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  /* --- Hamburger toggle --- */
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+
+  hamburger.addEventListener('click', function () {
+    var isOpen = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  /* Close mobile nav on link click */
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* --- Smooth scroll for all anchor links --- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var offset = 76; // header height
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* --- Set min date for reservation form --- */
+  var fechaInput = document.getElementById('r-fecha');
+  if (fechaInput) {
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var dd = String(today.getDate()).padStart(2, '0');
+    fechaInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
+  }
+
+  /* --- Reservation form submit --- */
+  var form = document.getElementById('reserva-form');
+  var successMsg = document.getElementById('form-success');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    /* Basic validation */
+    var nombre = document.getElementById('r-nombre').value.trim();
+    var personas = document.getElementById('r-personas').value;
+    var fecha = document.getElementById('r-fecha').value;
+    var hora = document.getElementById('r-hora').value;
+
+    if (!nombre || !personas || !fecha || !hora) {
+      /* Shake form lightly */
+      form.style.transition = 'transform 0.1s';
+      form.style.transform = 'translateX(-4px)';
+      setTimeout(function () { form.style.transform = 'translateX(4px)'; }, 100);
+      setTimeout(function () { form.style.transform = 'translateX(0)'; }, 200);
+      return;
+    }
+
+    /* Show success */
+    successMsg.classList.add('visible');
+    successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    /* Reset form after delay */
+    setTimeout(function () {
+      form.reset();
+      setTimeout(function () {
+        successMsg.classList.remove('visible');
+      }, 5000);
+    }, 1200);
+  });
+
+  /* --- Scroll reveal (light, no lib) --- */
+  if ('IntersectionObserver' in window) {
+    var style = document.createElement('style');
+    style.textContent = '.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}.reveal.visible{opacity:1;transform:none}';
+    document.head.appendChild(style);
+
+    var targets = document.querySelectorAll('.dish-card, .amb-tile, .gallery-tile, .info-card, .ambiente-feature');
+    targets.forEach(function (el) { el.classList.add('reveal'); });
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    targets.forEach(function (el) { observer.observe(el); });
+  }
+})();
+</script>
+
+</body>
+</html>

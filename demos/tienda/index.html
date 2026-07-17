@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nórdik Store — Decoración y hogar de estilo nórdico</title>
+  <meta name="description" content="Nórdik Store: descubre muebles, decoración y artículos de hogar de estilo escandinavo y minimalista. Calidad nórdica para tu espacio.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Portfolio ribbon (obligatorio) -->
+  <a class="portfolio-ribbon" href="../../index.html">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    <span>Sitio de <b>demostración</b> · Portafolio de César Hernández</span>
+  </a>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- ================================================
+       ANNOUNCEMENT BAR
+       ================================================ -->
+  <div class="announcement-bar" role="banner" aria-label="Anuncio de la tienda">
+    <span>🚚 <strong>Envío gratis</strong> en compras superiores a $50 &nbsp;·&nbsp; Devoluciones en <strong>30 días</strong></span>
+  </div>
+
+  <!-- ================================================
+       HEADER
+       ================================================ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="site-logo" aria-label="Nórdik Store — Inicio">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </span>
+        <span class="logo-text">Nórdik<span> Store</span></span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#categorias">Sala</a>
+        <a href="#categorias">Cocina</a>
+        <a href="#categorias">Dormitorio</a>
+        <a href="#categorias">Decoración</a>
+      </nav>
+
+      <!-- Header actions -->
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Buscar productos">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn" aria-label="Ver carrito de compras (0 artículos)" id="cart-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge" id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+        </button>
+
+        <!-- Mobile menu toggle -->
+        <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-nav" id="menu-toggle">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menu-icon">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Menú móvil">
+      <a href="#categorias">Sala</a>
+      <a href="#categorias">Cocina</a>
+      <a href="#categorias">Dormitorio</a>
+      <a href="#categorias">Decoración</a>
+    </nav>
+  </header>
+
+  <!-- ================================================
+       MAIN CONTENT
+       ================================================ -->
+  <main id="main-content">
+
+    <!-- ---- HERO ---- -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <p class="hero-eyebrow" aria-hidden="true">Colección 2025</p>
+        <h1 id="hero-heading">Diseño <em>nórdico</em><br>para tu hogar</h1>
+        <p>Piezas cuidadosamente seleccionadas que combinan funcionalidad escandinava con una estética limpia y atemporal. Tu hogar, renovado.</p>
+        <div class="hero-actions">
+          <a href="#productos" class="btn btn-primary">
+            Ver productos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#categorias" class="btn btn-outline">Explorar categorías</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- CATEGORIES ---- -->
+    <section class="section" id="categorias" aria-labelledby="cat-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="cat-heading">Categorías</h2>
+          <a href="#productos" class="section-link">
+            Ver todo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="categories-grid">
+
+          <!-- Sala -->
+          <a href="#productos" class="cat-card" aria-label="Categoría Sala de estar">
+            <span class="cat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 9V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2"/>
+                <path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v9H2z"/>
+                <path d="M6 20v1M18 20v1"/>
+              </svg>
+            </span>
+            <span class="cat-name">Sala</span>
+          </a>
+
+          <!-- Cocina -->
+          <a href="#productos" class="cat-card" aria-label="Categoría Cocina">
+            <span class="cat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6" y1="1" x2="6" y2="4"/>
+                <line x1="10" y1="1" x2="10" y2="4"/>
+                <line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </span>
+            <span class="cat-name">Cocina</span>
+          </a>
+
+          <!-- Dormitorio -->
+          <a href="#productos" class="cat-card" aria-label="Categoría Dormitorio">
+            <span class="cat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4v16"/>
+                <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
+                <path d="M2 17h20"/>
+                <path d="M6 8v9"/>
+              </svg>
+            </span>
+            <span class="cat-name">Dormitorio</span>
+          </a>
+
+          <!-- Decoración -->
+          <a href="#productos" class="cat-card" aria-label="Categoría Decoración">
+            <span class="cat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </span>
+            <span class="cat-name">Decoración</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ---- PRODUCTS ---- -->
+    <section class="section" id="productos" aria-labelledby="products-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="products-heading">Productos destacados</h2>
+          <a href="#" class="section-link">
+            Ver todos
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="products-grid" role="list" aria-label="Grilla de productos">
+
+          <!-- 1. Lámpara de arco Frida -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-lamp" aria-hidden="true">
+              <span class="product-badge badge-new">Nuevo</span>
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#c54d2c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="5" r="3"/>
+                <path d="M12 8v13"/>
+                <path d="M5 21h14"/>
+                <path d="M12 8 Q18 8 18 3"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Sala · Iluminación</p>
+              <p class="product-name">Lámpara de Arco Frida</p>
+              <div class="product-footer">
+                <p class="product-price">$129<span class="product-price-old">$159</span></p>
+                <button class="btn-add" aria-label="Agregar Lámpara de Arco Frida al carrito" data-name="Lámpara de Arco Frida">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Taza de cerámica Fika -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-mug" aria-hidden="true">
+              <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#3a6ea8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6" y1="1" x2="6" y2="4"/>
+                <line x1="10" y1="1" x2="10" y2="4"/>
+                <line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Cocina · Vajilla</p>
+              <p class="product-name">Taza de Cerámica Fika</p>
+              <div class="product-footer">
+                <p class="product-price">$24</p>
+                <button class="btn-add" aria-label="Agregar Taza de Cerámica Fika al carrito" data-name="Taza de Cerámica Fika">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Planta Monstera en maceta -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-plant" aria-hidden="true">
+              <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#2d7a3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22V12"/>
+                <path d="M12 12C12 12 8 10 5 6c4 0 7 2 7 6z"/>
+                <path d="M12 12C12 12 16 10 19 6c-4 0-7 2-7 6z"/>
+                <path d="M12 12c0 0-3 4-3 8"/>
+                <path d="M12 12c0 0 3 4 3 8"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Decoración · Plantas</p>
+              <p class="product-name">Monstera en Maceta Stoneware</p>
+              <div class="product-footer">
+                <p class="product-price">$48</p>
+                <button class="btn-add" aria-label="Agregar Monstera en Maceta al carrito" data-name="Monstera en Maceta Stoneware">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Silla Lund -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-chair" aria-hidden="true">
+              <span class="product-badge badge-sale">Oferta</span>
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#8c7a62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 12V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v7"/>
+                <rect x="4" y="12" width="16" height="3" rx="1"/>
+                <path d="M6 15v4M18 15v4"/>
+                <path d="M6 19h4M14 19h4"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Sala · Asientos</p>
+              <p class="product-name">Silla Lund de Madera de Roble</p>
+              <div class="product-footer">
+                <p class="product-price">$219<span class="product-price-old">$289</span></p>
+                <button class="btn-add" aria-label="Agregar Silla Lund al carrito" data-name="Silla Lund de Madera de Roble">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Cojín Bjerke -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-cushion" aria-hidden="true">
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#a85480" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="6"/>
+                <path d="M8 6v12M16 6v12"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Dormitorio · Textiles</p>
+              <p class="product-name">Cojín Bjerke Lino Natural</p>
+              <div class="product-footer">
+                <p class="product-price">$36</p>
+                <button class="btn-add" aria-label="Agregar Cojín Bjerke al carrito" data-name="Cojín Bjerke Lino Natural">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Jarrón Dalvik -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-vase" aria-hidden="true">
+              <span class="product-badge badge-new">Nuevo</span>
+              <svg width="62" height="62" viewBox="0 0 24 24" fill="none" stroke="#6b47a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6l2 6c0 3-2 6-5 7-3-1-5-4-5-7z"/>
+                <path d="M10 3V2h4v1"/>
+                <path d="M8 16l-1 5h10l-1-5"/>
+                <line x1="7" y1="21" x2="17" y2="21"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Decoración · Jarrones</p>
+              <p class="product-name">Jarrón Dalvik Cerámica Mate</p>
+              <div class="product-footer">
+                <p class="product-price">$57</p>
+                <button class="btn-add" aria-label="Agregar Jarrón Dalvik al carrito" data-name="Jarrón Dalvik Cerámica Mate">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Reloj de pared Solna -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-clock" aria-hidden="true">
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Decoración · Relojes</p>
+              <p class="product-name">Reloj de Pared Solna Minimalista</p>
+              <div class="product-footer">
+                <p class="product-price">$74</p>
+                <button class="btn-add" aria-label="Agregar Reloj Solna al carrito" data-name="Reloj de Pared Solna Minimalista">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Manta Krama -->
+          <article class="product-card" role="listitem">
+            <div class="product-tile tile-blanket" aria-hidden="true">
+              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#a8823a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <path d="M3 9h18M3 14h18"/>
+                <path d="M8 4v16M16 4v16"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <p class="product-category">Dormitorio · Textiles</p>
+              <p class="product-name">Manta Krama Lana Merino</p>
+              <div class="product-footer">
+                <p class="product-price">$92<span class="product-price-old">$115</span></p>
+                <button class="btn-add" aria-label="Agregar Manta Krama al carrito" data-name="Manta Krama Lana Merino">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- NEWSLETTER / OFFERS BAND ---- -->
+    <section class="newsletter-band" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-inner">
+
+          <div class="newsletter-copy">
+            <p class="newsletter-eyebrow">Newsletter</p>
+            <h2 id="newsletter-heading">10% de descuento<br>en tu primera compra</h2>
+            <p>Suscríbete y recibe inspiración nórdica, novedades y ofertas exclusivas directamente en tu correo.</p>
+          </div>
+
+          <div class="newsletter-form">
+            <form id="newsletter-form" novalidate aria-label="Formulario de suscripción al newsletter">
+              <div class="newsletter-input-group">
+                <label for="email-input" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="email-input"
+                  placeholder="tu@correo.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                >
+                <button type="submit" class="btn btn-primary">Suscribirme</button>
+              </div>
+            </form>
+            <div class="newsletter-confirm" id="newsletter-confirm" role="status" aria-live="polite">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              ¡Bienvenid@! Revisa tu bandeja de entrada.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="#" class="site-logo" style="margin-bottom:.75rem;display:inline-flex" aria-label="Nórdik Store">
+            <span class="logo-icon" aria-hidden="true" style="width:28px;height:28px">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </span>
+            <span class="logo-text" style="margin-left:.5rem">Nórdik<span> Store</span></span>
+          </a>
+          <p>Artículos de hogar con alma escandinava. Diseño limpio, materiales nobles y funcionalidad que dura décadas.</p>
+          <div class="social-links">
+            <!-- Instagram -->
+            <a href="#" class="social-link" aria-label="Nórdik Store en Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/>
+              </svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="#" class="social-link" aria-label="Nórdik Store en Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.268.64 1.268 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.565 0-2.387-1.716-4.057-4.165-4.057-2.836 0-4.5 2.127-4.5 4.326 0 .856.33 1.775.741 2.277a.3.3 0 0 1 .069.286c-.075.313-.244.994-.277 1.134-.044.183-.146.221-.338.133-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="social-link" aria-label="Nórdik Store en Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tienda -->
+        <div class="footer-col">
+          <h3>Tienda</h3>
+          <ul>
+            <li><a href="#categorias">Sala de estar</a></li>
+            <li><a href="#categorias">Cocina</a></li>
+            <li><a href="#categorias">Dormitorio</a></li>
+            <li><a href="#categorias">Decoración</a></li>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+
+        <!-- Ayuda -->
+        <div class="footer-col">
+          <h3>Ayuda</h3>
+          <ul>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Envíos y entregas</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Guía de tallas</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Nosotros -->
+        <div class="footer-col">
+          <h3>Nosotros</h3>
+          <ul>
+            <li><a href="#">Nuestra historia</a></li>
+            <li><a href="#">Sostenibilidad</a></li>
+            <li><a href="#">Proveedores</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 Nórdik Store — Sitio de <strong>demostración</strong> creado por <a href="../../index.html">César Hernández</a>. No representa una tienda real.</p>
+        <p>
+          <a href="#">Privacidad</a> &nbsp;·&nbsp;
+          <a href="#">Términos</a> &nbsp;·&nbsp;
+          <a href="#">Cookies</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-icon" aria-hidden="true">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </span>
+    Producto agregado al carrito
+  </div>
+
+  <!-- ================================================
+       JS — Mínimo, sin librerías externas
+       ================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* --- Cart counter --- */
+      var cartCount = 0;
+      var cartBadge = document.getElementById('cart-count');
+      var cartBtn   = document.getElementById('cart-btn');
+      var toast     = document.getElementById('toast');
+      var toastTimer;
+
+      function updateCartBadge() {
+        cartBadge.textContent = cartCount;
+        cartBtn.setAttribute('aria-label', 'Ver carrito de compras (' + cartCount + ' artículo' + (cartCount !== 1 ? 's' : '') + ')');
+        // Bump animation
+        cartBadge.classList.remove('bump');
+        void cartBadge.offsetWidth; // reflow
+        cartBadge.classList.add('bump');
+        setTimeout(function () { cartBadge.classList.remove('bump'); }, 300);
+      }
+
+      function showToast() {
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toast.classList.remove('show');
+        }, 2000);
+      }
+
+      /* Attach to all "Agregar" buttons */
+      document.querySelectorAll('.btn-add').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          cartCount++;
+          updateCartBadge();
+          showToast();
+        });
+      });
+
+      /* --- Mobile menu toggle --- */
+      var menuToggle = document.getElementById('menu-toggle');
+      var mobileNav  = document.getElementById('mobile-nav');
+      var menuIcon   = document.getElementById('menu-icon');
+
+      var iconOpen  = '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+      var iconClose = '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
+
+      menuToggle.addEventListener('click', function () {
+        var isOpen = mobileNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+        menuIcon.innerHTML = isOpen ? iconClose : iconOpen;
+      });
+
+      /* Close mobile menu when a nav link is clicked */
+      mobileNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          mobileNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Abrir menú de navegación');
+          menuIcon.innerHTML = iconOpen;
+        });
+      });
+
+      /* --- Newsletter form --- */
+      var newsletterForm    = document.getElementById('newsletter-form');
+      var newsletterConfirm = document.getElementById('newsletter-confirm');
+
+      newsletterForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var emailInput = document.getElementById('email-input');
+        if (!emailInput.value || !emailInput.validity.valid) {
+          emailInput.focus();
+          return;
+        }
+        newsletterForm.style.display = 'none';
+        newsletterConfirm.classList.add('visible');
+      });
+
+    })();
+  </script>
+
+</body>
+</html>

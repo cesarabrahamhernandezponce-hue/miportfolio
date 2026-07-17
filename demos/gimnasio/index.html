@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PULSE Fitness — Entrena sin límites</title>
+  <meta name="description" content="PULSE Fitness: el gimnasio donde cada repetición cuenta. Clases grupales, planes personalizados y entrenadores certificados. Prueba gratis tu primera clase.">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Portfolio Demo Banner -->
+<a class="portfolio-ribbon" href="../../index.html">
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+  <span>Sitio de <b>demostración</b> · Portafolio de César Hernández</span>
+</a>
+
+<!-- Skip Navigation -->
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+<header class="site-header" role="banner">
+  <div class="container nav-inner">
+    <a href="#inicio" class="logo" aria-label="PULSE Fitness — inicio">
+      <svg viewBox="0 0 28 28" width="28" height="28" fill="none" aria-hidden="true">
+        <rect width="28" height="28" rx="6" fill="#b6ff3a"/>
+        <path d="M6 14h4l2-6 4 12 2-8 2 4 2-2h4" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      PULSE<span class="logo-dot"> Fitness</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links" role="list">
+        <li><a href="#clases">Clases</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#entrenadores">Entrenadores</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contacto" class="btn btn-primary nav-cta" style="padding:11px 22px;font-size:.88rem;">Prueba gratis</a>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" class="mobile-menu" aria-label="Menú móvil">
+    <a href="#clases" class="mobile-link">Clases</a>
+    <a href="#planes" class="mobile-link">Planes</a>
+    <a href="#entrenadores" class="mobile-link">Entrenadores</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+    <a href="#contacto" class="btn btn-primary mobile-link">Prueba gratis</a>
+  </nav>
+</header>
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+<main id="main-content">
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <!-- Decorative SVG Energy Shape -->
+  <svg class="hero-svg" viewBox="0 0 480 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="240" cy="260" rx="200" ry="220" fill="rgba(182,255,58,.04)" stroke="rgba(182,255,58,.18)" stroke-width="1"/>
+    <ellipse cx="240" cy="260" rx="140" ry="160" fill="rgba(182,255,58,.05)" stroke="rgba(182,255,58,.22)" stroke-width="1"/>
+    <ellipse cx="240" cy="260" rx="80" ry="100" fill="rgba(182,255,58,.07)" stroke="rgba(182,255,58,.3)" stroke-width="1"/>
+    <!-- Dumbbell silhouette -->
+    <rect x="160" y="248" width="160" height="24" rx="12" fill="rgba(182,255,58,.15)"/>
+    <rect x="130" y="220" width="40" height="80" rx="10" fill="rgba(182,255,58,.18)"/>
+    <rect x="310" y="220" width="40" height="80" rx="10" fill="rgba(182,255,58,.18)"/>
+    <rect x="115" y="232" width="20" height="56" rx="8" fill="rgba(182,255,58,.12)"/>
+    <rect x="345" y="232" width="20" height="56" rx="8" fill="rgba(182,255,58,.12)"/>
+    <!-- Lightning bolt accent -->
+    <path d="M256 140 L228 200 L248 200 L224 280 L272 210 L250 210 L278 140 Z" fill="rgba(182,255,58,.3)" stroke="rgba(182,255,58,.6)" stroke-width="1"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">El gimnasio que te impulsa</p>
+      <h1 class="hero-title" id="hero-title">
+        SUPERA<br>
+        TUS <span class="accent">LÍMITES</span>
+      </h1>
+      <p class="hero-subtitle">
+        Más de 1.200 socios confían en PULSE Fitness para transformar su cuerpo y mente.
+        Entrenadores certificados, clases para todos los niveles y tecnología que mide tu progreso real.
+      </p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg>
+          Prueba gratis
+        </a>
+        <a href="#planes" class="btn btn-outline">Ver planes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     ESTADÍSTICAS
+     ===================================================== -->
+<section class="stats-bar" aria-label="Estadísticas del gimnasio">
+  <div class="container">
+    <dl class="stats-grid">
+      <div>
+        <dt class="stat-number">1.200+</dt>
+        <dd class="stat-label">Socios activos</dd>
+      </div>
+      <div>
+        <dt class="stat-number">30+</dt>
+        <dd class="stat-label">Clases semanales</dd>
+      </div>
+      <div>
+        <dt class="stat-number">12</dt>
+        <dd class="stat-label">Entrenadores</dd>
+      </div>
+      <div>
+        <dt class="stat-number">24/7</dt>
+        <dd class="stat-label">Siempre abierto</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- =====================================================
+     CLASES
+     ===================================================== -->
+<section class="classes" id="clases" aria-labelledby="classes-title">
+  <div class="container">
+    <header class="classes-header">
+      <p class="section-tag">Nuestras disciplinas</p>
+      <h2 class="section-title" id="classes-title">ELIGE TU <span>CLASE</span></h2>
+    </header>
+
+    <div class="classes-grid">
+
+      <!-- CrossFit -->
+      <article class="class-card">
+        <div class="class-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11M6.5 17.5h11M9 4v16M15 4v16"/>
+          </svg>
+        </div>
+        <h3 class="class-name">CrossFit</h3>
+        <p class="class-desc">Entrenamientos funcionales de alta intensidad que combinan levantamiento olímpico, gimnasia y cardio. Resultados rápidos y comunidad brutal.</p>
+        <span class="class-schedule">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.5 7.71V4.5h-1V9l3.146 1.854.508-.862L8.5 8.71z"/></svg>
+          Lun · Mié · Vie — 07:00 y 19:00
+        </span>
+      </article>
+
+      <!-- Spinning -->
+      <article class="class-card">
+        <div class="class-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/>
+            <line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/>
+            <line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="class-name">Spinning</h3>
+        <p class="class-desc">Cardio explosivo sobre bicicleta estática con música a todo volumen. Quema calorías, mejora la resistencia y libera endorfinas en 45 minutos.</p>
+        <span class="class-schedule">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.5 7.71V4.5h-1V9l3.146 1.854.508-.862L8.5 8.71z"/></svg>
+          Mar · Jue — 06:30 y 18:30
+        </span>
+      </article>
+
+      <!-- Yoga -->
+      <article class="class-card">
+        <div class="class-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M12 7v4M8 11c1.5 2 5.5 2 8 0M6 18c1-3 3-5 6-5s5 2 6 5"/>
+          </svg>
+        </div>
+        <h3 class="class-name">Yoga</h3>
+        <p class="class-desc">Equilibrio perfecto entre fuerza, flexibilidad y calma mental. Clases para todos los niveles con instructores que guían cada postura con precisión.</p>
+        <span class="class-schedule">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.5 7.71V4.5h-1V9l3.146 1.854.508-.862L8.5 8.71z"/></svg>
+          Sáb · Dom — 09:00
+        </span>
+      </article>
+
+      <!-- Boxeo -->
+      <article class="class-card">
+        <div class="class-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="8" width="12" height="10" rx="3"/>
+            <path d="M15 10h2a2 2 0 012 2v2a2 2 0 01-2 2h-2"/>
+            <line x1="3" y1="6" x2="15" y2="6"/>
+          </svg>
+        </div>
+        <h3 class="class-name">Boxeo</h3>
+        <p class="class-desc">Técnica, potencia y disciplina. Aprende combinaciones reales sobre saco y con sparring controlado. El deporte más completo para cuerpo y mente.</p>
+        <span class="class-schedule">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.5 7.71V4.5h-1V9l3.146 1.854.508-.862L8.5 8.71z"/></svg>
+          Lun · Mié · Vie — 20:00
+        </span>
+      </article>
+
+      <!-- Funcional -->
+      <article class="class-card">
+        <div class="class-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3 class="class-name">Funcional</h3>
+        <p class="class-desc">Movimientos naturales del cuerpo llevados al máximo. Burpees, sentadillas y press combinados en circuitos que transforman tu composición corporal.</p>
+        <span class="class-schedule">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.5 7.71V4.5h-1V9l3.146 1.854.508-.862L8.5 8.71z"/></svg>
+          Mar · Jue · Sáb — 08:00 y 18:00
+        </span>
+      </article>
+
+      <!-- Musculación -->
+      <article class="class-card">
+        <div class="class-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11M6.5 17.5h11"/>
+            <rect x="5" y="4" width="4" height="16" rx="2"/>
+            <rect x="15" y="4" width="4" height="16" rx="2"/>
+          </svg>
+        </div>
+        <h3 class="class-name">Musculación</h3>
+        <p class="class-desc">Sala de pesos libres, máquinas de última generación y asesoramiento personalizado. Diseña tu rutina con nuestros entrenadores y supera tus marcas.</p>
+        <span class="class-schedule">
+          <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.5 7.71V4.5h-1V9l3.146 1.854.508-.862L8.5 8.71z"/></svg>
+          Todos los días — 06:00 a 23:00
+        </span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     PLANES / PRECIOS
+     ===================================================== -->
+<section class="pricing" id="planes" aria-labelledby="pricing-title">
+  <div class="container">
+    <header class="pricing-header" style="text-align:center;">
+      <p class="section-tag">Planes de membresía</p>
+      <h2 class="section-title" id="pricing-title">ELIGE TU <span>PLAN</span></h2>
+      <p style="color:var(--muted);margin-top:12px;font-size:.95rem;">Sin contratos de permanencia. Cancela cuando quieras.</p>
+    </header>
+
+    <div class="plans-grid">
+
+      <!-- Básico -->
+      <div class="plan-card">
+        <p class="plan-name">Básico</p>
+        <p class="plan-price"><span>€</span>29</p>
+        <p class="plan-period">por mes, IVA incluido</p>
+        <ul class="plan-features">
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Acceso sala de musculación
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            2 clases grupales / semana
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Acceso de lunes a viernes
+          </li>
+          <li class="inactive">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            Acceso 24/7
+          </li>
+          <li class="inactive">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            Plan nutricional
+          </li>
+          <li class="inactive">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            Entrenador personal
+          </li>
+        </ul>
+        <a href="#" class="btn btn-outline">Empezar ahora</a>
+      </div>
+
+      <!-- Pro (destacado) -->
+      <div class="plan-card popular">
+        <span class="popular-badge">Más popular</span>
+        <p class="plan-name">Pro</p>
+        <p class="plan-price"><span>€</span>49</p>
+        <p class="plan-period">por mes, IVA incluido</p>
+        <ul class="plan-features">
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Acceso sala de musculación
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Clases grupales ilimitadas
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Acceso 24/7
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Plan nutricional básico
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            App de seguimiento
+          </li>
+          <li class="inactive">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            Entrenador personal
+          </li>
+        </ul>
+        <a href="#" class="btn btn-primary">Empezar ahora</a>
+      </div>
+
+      <!-- Elite -->
+      <div class="plan-card">
+        <p class="plan-name">Elite</p>
+        <p class="plan-price"><span>€</span>89</p>
+        <p class="plan-period">por mes, IVA incluido</p>
+        <ul class="plan-features">
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Todo lo del plan Pro
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            4 sesiones personales / mes
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Plan nutricional completo
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Análisis corporal mensual
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Acceso zona VIP de recuperación
+          </li>
+          <li class="active">
+            <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#b6ff3a" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10l4 4 8-8"/></svg>
+            Soporte prioritario 24h
+          </li>
+        </ul>
+        <a href="#" class="btn btn-outline">Empezar ahora</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     ENTRENADORES
+     ===================================================== -->
+<section class="trainers" id="entrenadores" aria-labelledby="trainers-title">
+  <div class="container">
+    <header class="trainers-header" style="text-align:center;">
+      <p class="section-tag">Nuestro equipo</p>
+      <h2 class="section-title" id="trainers-title">LOS <span>MEJORES</span> ENTRENADORES</h2>
+    </header>
+
+    <div class="trainers-grid">
+
+      <article class="trainer-card">
+        <div class="trainer-avatar" style="background:linear-gradient(135deg,#1a4d00,#7acc00);">MR</div>
+        <h3 class="trainer-name">Miguel Ramos</h3>
+        <p class="trainer-role">CrossFit &amp; Funcional</p>
+        <p class="trainer-bio">Campeón regional de CrossFit 2021 y 2022. Certificado CF-L3. Más de 8 años formando atletas de todos los niveles.</p>
+      </article>
+
+      <article class="trainer-card">
+        <div class="trainer-avatar" style="background:linear-gradient(135deg,#4d0d00,#cc3300);">LV</div>
+        <h3 class="trainer-name">Laura Vidal</h3>
+        <p class="trainer-role">Boxeo &amp; Cardio</p>
+        <p class="trainer-bio">Ex boxeadora amateur con 5 títulos nacionales. Especialista en acondicionamiento y técnica de combate para todos los niveles.</p>
+      </article>
+
+      <article class="trainer-card">
+        <div class="trainer-avatar" style="background:linear-gradient(135deg,#00204d,#0066cc);">AG</div>
+        <h3 class="trainer-name">Andrés García</h3>
+        <p class="trainer-role">Musculación &amp; Nutrición</p>
+        <p class="trainer-bio">Licenciado en CCAFD y Máster en Nutrición deportiva. Especialista en hipertrofia y pérdida de grasa con más de 500 casos de éxito.</p>
+      </article>
+
+      <article class="trainer-card">
+        <div class="trainer-avatar" style="background:linear-gradient(135deg,#2a004d,#8800cc);">SM</div>
+        <h3 class="trainer-name">Sara Molina</h3>
+        <p class="trainer-role">Yoga &amp; Movilidad</p>
+        <p class="trainer-bio">Instructora certificada RYT-500. Combina yoga, pilates y trabajo de movilidad para mejorar la calidad de movimiento y el bienestar mental.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     TESTIMONIO
+     ===================================================== -->
+<section class="testimonial" aria-labelledby="testimonial-heading">
+  <div class="container">
+    <div class="testimonial-inner">
+      <p id="testimonial-heading" class="section-tag" style="text-align:center;">Lo que dicen nuestros socios</p>
+
+      <div class="testimonial-stars" aria-label="5 de 5 estrellas">
+        <svg viewBox="0 0 20 20" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M10 1l2.39 4.85L18 6.91l-4 3.9.94 5.5L10 13.77l-4.94 2.54.94-5.5-4-3.9 5.61-.56z"/></svg>
+        <svg viewBox="0 0 20 20" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M10 1l2.39 4.85L18 6.91l-4 3.9.94 5.5L10 13.77l-4.94 2.54.94-5.5-4-3.9 5.61-.56z"/></svg>
+        <svg viewBox="0 0 20 20" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M10 1l2.39 4.85L18 6.91l-4 3.9.94 5.5L10 13.77l-4.94 2.54.94-5.5-4-3.9 5.61-.56z"/></svg>
+        <svg viewBox="0 0 20 20" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M10 1l2.39 4.85L18 6.91l-4 3.9.94 5.5L10 13.77l-4.94 2.54.94-5.5-4-3.9 5.61-.56z"/></svg>
+        <svg viewBox="0 0 20 20" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M10 1l2.39 4.85L18 6.91l-4 3.9.94 5.5L10 13.77l-4.94 2.54.94-5.5-4-3.9 5.61-.56z"/></svg>
+      </div>
+
+      <blockquote>
+        <p class="testimonial-quote">
+          "Perdí <span class="accent">18 kilos</span> en 5 meses y nunca me sentí mejor.
+          El equipo de PULSE me cambió la vida — literalmente."
+        </p>
+        <footer class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">JL</div>
+          <div class="testimonial-info">
+            <strong>Javier López</strong>
+            <span>Socio Plan Pro · Madrid</span>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     CTA / FORMULARIO
+     ===================================================== -->
+<section class="cta-section" id="contacto" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <p class="section-tag">Tu primera clase</p>
+        <h2 class="section-title" id="cta-title">EMPIEZA HOY,<br><span>GRATIS</span></h2>
+        <p>Ven a conocer las instalaciones, prueba cualquier clase y habla con nuestro equipo. Sin compromisos, sin tarjeta de crédito. Solo trae tu energía.</p>
+
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(182,255,58,.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg>
+            </div>
+            <span style="font-size:.9rem;color:var(--muted);">Sin permanencia ni contratos</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(182,255,58,.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg>
+            </div>
+            <span style="font-size:.9rem;color:var(--muted);">Te llamamos en menos de 2 horas</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(182,255,58,.1);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg>
+            </div>
+            <span style="font-size:.9rem;color:var(--muted);">Acceso inmediato el mismo día</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-form-wrap">
+        <p class="cta-form-title">Reserva tu clase gratuita</p>
+        <form id="free-class-form" novalidate>
+          <div class="form-group">
+            <label for="field-name">Tu nombre</label>
+            <input type="text" id="field-name" name="nombre" placeholder="Ej. María García" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label for="field-phone">Teléfono de contacto</label>
+            <input type="tel" id="field-phone" name="telefono" placeholder="Ej. 612 345 678" autocomplete="tel" required>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 17.5a7.5 7.5 0 100-15 7.5 7.5 0 000 15z"/><path d="M7 10l2 2 4-4"/></svg>
+            Quiero mi clase gratis
+          </button>
+        </form>
+        <div class="form-confirmation" id="form-confirmation" role="alert" aria-live="polite">
+          ¡Listo! Te contactaremos para tu clase de prueba gratis.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#inicio" class="logo" aria-label="PULSE Fitness — volver al inicio">
+          <svg viewBox="0 0 28 28" width="24" height="24" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="6" fill="#b6ff3a"/>
+            <path d="M6 14h4l2-6 4 12 2-8 2 4 2-2h4" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          PULSE<span class="logo-dot"> Fitness</span>
+        </a>
+        <p>El gimnasio donde cada repetición cuenta. Más de 1.200 socios ya viven la experiencia PULSE.</p>
+        <nav aria-label="Redes sociales">
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram de PULSE Fitness">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook de PULSE Fitness">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube de PULSE Fitness">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10 9 15 12 10 15 10 9" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok de PULSE Fitness">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.77a8.17 8.17 0 004.77 1.53V6.86a4.85 4.85 0 01-1-.17z"/>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Clases -->
+      <div class="footer-col">
+        <h4>Clases</h4>
+        <ul>
+          <li><a href="#clases">CrossFit</a></li>
+          <li><a href="#clases">Spinning</a></li>
+          <li><a href="#clases">Yoga</a></li>
+          <li><a href="#clases">Boxeo</a></li>
+          <li><a href="#clases">Funcional</a></li>
+          <li><a href="#clases">Musculación</a></li>
+        </ul>
+      </div>
+
+      <!-- Gimnasio -->
+      <div class="footer-col">
+        <h4>Gimnasio</h4>
+        <ul>
+          <li><a href="#planes">Planes y precios</a></li>
+          <li><a href="#entrenadores">Entrenadores</a></li>
+          <li><a href="#">Instalaciones</a></li>
+          <li><a href="#">Horarios completos</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <address>
+          <strong>PULSE Fitness Madrid</strong><br>
+          Calle Gran Vía, 42<br>
+          28013 Madrid, España<br><br>
+          <strong>Tel.:</strong> +34 91 234 56 78<br>
+          <strong>Email:</strong> hola@pulsefitness.es<br><br>
+          <strong>Horario:</strong> 24 horas, 365 días
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 PULSE Fitness. Todos los derechos reservados.</p>
+      <p class="demo-note">Sitio de demostración creado por <a href="../../index.html">César Hernández</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // --- Hamburger menu ---
+  const btn = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  btn.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close mobile menu when a link is clicked
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // --- Free class form ---
+  const form = document.getElementById('free-class-form');
+  const confirmation = document.getElementById('form-confirmation');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.style.display = 'none';
+    confirmation.classList.add('visible');
+  });
+</script>
+</body>
+</html>
