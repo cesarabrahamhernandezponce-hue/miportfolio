@@ -33,6 +33,7 @@ body {
   color: var(--text-dark);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* --- Skip Link --- */
