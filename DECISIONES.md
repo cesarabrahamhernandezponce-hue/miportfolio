@@ -154,7 +154,7 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
 
 - Foto para el retrato (y para la tarjeta de vista previa).
 - Confirmar que el WhatsApp sigue siendo +53 59522128 y el correo el Gmail actual.
-- Charcutería: se presenta como **«Mostrador»**, tipo **«Proyecto propio»** (confirmado). Falta confirmar su etiqueta de estado.
+- Charcutería: se presenta como **«Mostrador»**, tipo **«Proyecto propio»**, estado **«En línea»** (César confirmó el 2026-10-07 que la charcutería ya no la usa). Las etiquetas «En uso en un negocio» y «Hecho para mi trabajo» quedan disponibles pero hoy no las lleva ningún proyecto.
 - Instagram confirmado: https://www.instagram.com/csarh_hdez
 
 ## Trabajo en los proyectos (fuera del portafolio, se hace por partes)

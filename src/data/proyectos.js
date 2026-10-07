@@ -38,11 +38,10 @@ export const proyectos = [
     codigo: "https://github.com/cesarabrahamhernandezponce-hue/chess_coach",
   },
   {
-    // PENDIENTE: confirmar `estado` (César dejó ese trabajo; no sabemos si el negocio la sigue usando).
     nombre: "Mostrador",
     descripcion:
       "Caja e inventario para un mostrador: ventas por peso o por unidad, control de merma y cuadre de caja al cerrar el turno. Funciona sin internet.",
-    estado: "En uso en un negocio",
+    estado: "En línea",
     tipo: "Proyecto propio",
     tecnologias: ["JavaScript", "App instalable"],
     captura: "charcuteria.png",
