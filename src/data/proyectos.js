@@ -18,11 +18,13 @@ export const proyectos = [
     nombre: "Empire Signal",
     descripcion:
       "Analizador lingüístico para estudiantes de inglés y español de nivel B2–C1. Analiza palabras y frases con inteligencia artificial.",
-    estado: "En línea",
+    estado: "En desarrollo",
     tipo: "Proyecto propio",
     tecnologias: ["Next.js", "React", "TypeScript", "Prisma", "Supabase"],
     captura: "empire-signal.png",
-    demo: "https://empire-signal.vercel.app",
+    // Sin demo mientras la app tenga fallos. Al arreglarla: volver a poner
+    // "https://empire-signal.vercel.app" aquí y estado "En línea".
+    demo: "",
     codigo: "https://github.com/cesarabrahamhernandezponce-hue/empire-signal",
     destacado: true,
   },
