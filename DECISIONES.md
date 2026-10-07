@@ -175,3 +175,26 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
 - [x] **Parte 6 — Animaciones (GSAP)** (2026-10-07): `src/scripts/animaciones.js`. Peso real: 114 KB (44,5 KB comprimido), GSAP + ScrollTrigger. Si la librería tarda más de 1,5 s, la portada se muestra sin animación.
 - [ ] Parte 7 — Proyectos externos (publicar charcutería, ajedrez y piano; revisar historiales; capturas)
 - [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel
+
+## Notas de César sobre los proyectos (2026-10-07, antes de la Parte 7)
+
+- Correo oficial confirmado: cesarabrahamhernandezponce@gmail.com (ya estaba en `src/data/sitio.js`).
+- **Empire Signal:** está «medio roto» al usarlo. No se arregla dentro de este trabajo, pero hay que tenerlo en cuenta (es el destacado y lleva «En línea» y «Ver demo»). Pendiente decidir qué hacer en el portafolio mientras tanto.
+- **Area 51 Tattoo:** está bien.
+- **Ajedrez:** está bien; falta subirlo.
+- **Piano:** en proceso; hay que subirlo también.
+- **Mostrador:** está bien; solo falta lo ya señalado (publicarlo donde abra desde Cuba).
+
+## Revisión de historiales (2026-10-07, solo lectura)
+
+Búsqueda por patrones de clave (OpenRouter, Google, JWT de Supabase, URLs de Postgres con contraseña, tokens de GitHub, claves privadas) en todos los commits y ramas, más archivos sensibles alguna vez versionados. Es una búsqueda por patrones: reduce mucho el riesgo, no lo elimina.
+
+| Repo | Claves en el historial | Otras cosas a saber antes de abrirlo |
+|---|---|---|
+| empire-signal (145 commits) | Ninguna. `.env` y `.env.local` están ignorados; `.env.example` solo tiene valores de ejemplo | 55 archivos con cambios sin commitear y 1 commit sin pushear. El correo de César aparece en las páginas About y Privacy (a propósito) |
+| chess_coach (7 commits) | Ninguna | El trabajo reciente (6 commits, incluida la preparación para código abierto) está en la rama `feat/ensenar-aperturas`, no en `main`; 1 commit sin pushear |
+| charcuteria (25 commits) | Ninguna | Incluye `fotos/` (4 fotos de WhatsApp), el logo y fotos de JM, y `CLAUDE.md` con notas internas de trabajo; 1 commit sin pushear |
+| area51_tattoo (1 commit, ya público) | Ninguna | Tiene `node_modules/` subido al repo |
+| Piano (sin git) | Ninguna en `app/` | 34 archivos, 272 KB. Falta crear el repo |
+
+La «imagen rota» de la captura provisional de Mostrador fue cosa de la captura (se tomó antes de que cargara); `assets/cerdo.jpg` existe y está versionada. No hay nada que reparar ahí.
