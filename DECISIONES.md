@@ -177,13 +177,13 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
   - [x] Historiales revisados (ver tabla arriba).
   - [x] Empire Signal: «En desarrollo» y sin demo hasta que César lo arregle (sigue destacado).
   - [x] Ajedrez: `main` adelantada hasta `feat/ensenar-aperturas` (local, sin pushear).
-  - [x] Charcutería: `fotos/` y `CLAUDE.md` fuera del repo desde el último commit (siguen en la máquina y **siguen en el historial anterior**).
+  - [x] Charcutería: `fotos/` y `CLAUDE.md` fuera del repo **y borrados de todo el historial** (reescrito en local el 2026-10-07, de 26 a 18 commits). Siguen en la máquina. Respaldo del historial original en `~/proyectos/charcuteria-respaldo-2026-10-07/`. Falta que César haga `git push --force origin main`.
   - [x] Area 51: `node_modules/` fuera del repo (local, sin pushear).
   - [x] Piano: repo git creado en local, primer commit hecho.
   - [x] Capturas definitivas: ajedrez (pantalla «Nueva partida») y Mostrador (turno abierto con productos de ejemplo). Empire Signal, Area 51 y piano conservan la de su pantalla inicial.
   - [x] César: repo `pididacta` creado y subido.
   - [x] Ajedrez en https://chesscoach-drab.vercel.app y Mostrador en https://charcuteria-seven.vercel.app (ambos responden).
-  - [ ] Piano: el proyecto existe en Vercel pero no tiene ningún despliegue válido (DEPLOYMENT_NOT_FOUND). Añadido `vercel.json` (publicar `app/`); falta que César deje vacío el Root Directory y haga push.
+  - [x] Piano: **sin demo** por decisión de César (2026-10-07); en el portafolio solo lleva «Ver código». El despliegue en Vercel queda sin resolver.
   - [ ] Repos públicos: empire-signal, pididacta y area51_tattoo ya lo son; faltan chess_coach y charcuteria.
   - [ ] Poner los enlaces de demo y código definitivos en `src/data/proyectos.js`.
 - [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel
