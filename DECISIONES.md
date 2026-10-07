@@ -1,0 +1,177 @@
+# DECISIONES — portafolio nuevo
+
+Registro de lo que César ha decidido en la entrevista. **Resumen aprobado por César el 2026-10-07.** Se construye por partes.
+Lo marcado como **pendiente** todavía no está decidido.
+
+## Contexto fijo (dado por César)
+
+- Dos públicos: dueños de negocios sin conocimientos técnicos (principal) y reclutadores o clientes técnicos.
+- Se abre casi siempre desde el teléfono, desde la bio de Instagram o un mensaje de WhatsApp.
+- Cero costo, internet lento e intermitente, mobile-first.
+- No se borra el repo `miportfolio` ni su historial.
+- Todo texto visible lo aprueba César. No se inventan datos, testimonios ni números.
+
+## Ronda 1 — Técnico (2026-10-07)
+
+| Tema | Decisión |
+|---|---|
+| Stack | **Astro** (genera HTML estático, sin JavaScript por defecto, optimiza imágenes) |
+| Hosting | **Vercel**, conectado al mismo repo `miportfolio`. Nombre exacto de la URL: pendiente |
+| Añadir proyectos | **Un archivo de datos**: se copia un bloque y se pone la captura en una carpeta |
+| Idioma | **Solo español** |
+| Cómo se reemplaza lo actual | Propuesta de Claude, sin objeción: rama nueva `v2` con el contenido actual borrado; el sitio viejo sigue en línea hasta aprobar el nuevo. **Se confirma en el resumen final** |
+
+## Ronda 2 — Identidad visual (2026-10-07)
+
+| Tema | Decisión |
+|---|---|
+| Referencia | https://ishandutta2007.github.io (un seguidor de César). **No es por el estilo**: sirve de referencia por lo directo — saludo, presentación corta y proyectos con botones Código / Demo, en 15 KB |
+| Sensación | «Un toque optimizado y diferente». **Nada que tenga que ver con lo cubano** |
+| Tema | **Automático según el teléfono** (claro/oscuro solo con CSS, sin botón) |
+| Foto | **Retrato junto a la presentación**, en la primera pantalla. Falta que César indique qué foto |
+| Foto (archivo) | César la pasa después. Se construye con un hueco marcado |
+| Animaciones | **Más elaboradas, con librería de animación** (tipo GSAP). César lo eligió sabiendo que suma 30–70 KB de JavaScript. Qué librería y qué se anima exactamente: pendiente |
+| Dirección visual | **B · Musgo** (elegida viendo `diseno/opciones-visuales.html`): formas redondas, botones en píldora, la foto en una forma redondeada |
+| Colores (claro) | fondo `#F1F5EC`, texto `#12251C`, texto suave `#4C6257`, verde `#0B6B4D`, panel `#DDE8D6`, naranja `#FF8A1F` (solo en lo que se toca) |
+| Colores (oscuro) | fondo `#0D1E17`, texto `#E6F0E8`, texto suave `#9DB8AA`, verde `#62D6A6`, panel `#173227`, naranja `#FF9D45` |
+| Tipografía | **Gabarito**, una sola familia, alojada en el propio sitio (~34 KB) |
+
+## Ronda 3 — Estructura y contenido (2026-10-07)
+
+| Tema | Decisión |
+|---|---|
+| Secciones y orden | **Portada → Proyectos → Qué puedo construir → Cómo trabajo (pagos, mantenimiento) → Habilidades → Contacto**. Nombres provisionales; los títulos reales están pendientes |
+| Tarjeta de proyecto | Nombre, descripción, botones de enlace, **captura de pantalla, estado, tecnologías y tipo de proyecto** (cliente real / proyecto propio) |
+| Destacado y filtros | **Empire Signal destacado** (primero y más grande). **Sin filtros** |
+| Precios | **No se muestran.** Se invita a pedir presupuesto gratis |
+| Qué puedo construir | Páginas web y landing · Reservas y citas · Inventario, ventas y caja · Apps web completas · **y «lo que el cliente desee»** (trabajo a medida). Textos: pendientes |
+| Formas de pago | Efectivo, transferencia, moneda extranjera y pago por partes (anticipo al empezar, resto al entregar). **Se escriben en general**: sin nombres de plataformas, monedas ni porcentajes |
+| Extras del servicio | Mantenimiento, puesta en línea y apps que funcionan sin internet. **No** se ofrece «enseñar a usarla» (no marcado) |
+| Mantenimiento | **Se acuerda en cada proyecto**; la página no promete plazos ni condiciones |
+| Canales de contacto | **WhatsApp** (botón principal), **Instagram**, **correo** y **GitHub** |
+| Mensaje de WhatsApp | **«Hola César, vi tu portafolio y quiero hablar de un proyecto para mi negocio.»** (aprobado) |
+| Mención de IA | **Sí, breve y transparente**: una línea honesta (la usa para ir más rápido; revisa y entiende cada parte). Texto: pendiente |
+
+## Ronda 4 — Proyectos (2026-10-07)
+
+Los 5 proyectos del portafolio: **Empire Signal** (destacado), **Entrenador de ajedrez**, **Charcutería**, **Area 51 Tattoo** y **Piano (Pididacta)**.
+
+| Tema | Decisión |
+|---|---|
+| Gelen Nails | **Fuera.** Lo sustituye **Area 51 Tattoo** (cliente real, en línea en area51-tattoo.vercel.app, repo ya público) |
+| Charcutería | **Se enseña la app original** (cambiado por César al aprobar el resumen: dejó ese trabajo y la app es completamente suya). Se publica en Vercel tal cual. Pendiente: nombre con el que se presenta y si sus etiquetas de estado/tipo siguen siendo ciertas |
+| Ajedrez y Piano | **Cada uno en su propio sitio de Vercel**, enlazado desde el portafolio. El piano necesita antes un repo en GitHub |
+| Código público | César quiere enseñar el código de **los cinco**: Empire Signal, ajedrez, charcutería, piano y area51_tattoo (este ya es público). **Antes de abrir cada repo se revisa el historial** en busca de claves y datos privados. Hacerlos públicos lo hace César en GitHub |
+| Capturas | **Las genera Claude en tamaño teléfono**: una imagen fija por proyecto, con datos de ejemplo, comprimida. César las revisa |
+| Demos viejos | Los 4 demos ficticios (gimnasio, legal, restaurante, tienda) **se eliminan**. Quedan en el historial de git |
+| Etiquetas de estado | **En línea / En uso en un negocio / En desarrollo**. Reparto: Empire Signal y Area 51 «En línea»; charcutería «En uso en un negocio»; ajedrez «En línea» cuando se publique; piano «En desarrollo» |
+| URL | **cesarhernandez.vercel.app** (si está libre; alternativa a decidir si no) |
+
+Hallazgos de la exploración:
+
+- **Empire Signal**: `~/proyectos/empire/empire-signal`, en línea en empire-signal.vercel.app. Repo no público. Hay `output/demo.mp4` para capturas.
+- **Entrenador de ajedrez**: `~/proyectos/chess` (repo `chess_coach`, no público). Estático y PWA, sin publicar. Motor ~7 MB.
+- **Charcutería**: `~/proyectos/charcuteria`. JavaScript sin framework (no React) y ya usa `localStorage`. Publicada en Netlify (no abre desde Cuba sin VPN). Lleva el nombre real del negocio.
+- **Gelen Nails**: no está en la máquina (solo rastros de `~/nails` y del paquete `com.gelen.nails`). Falta saber dónde está el código.
+- **Piano (Pididacta)**: `~/proyectos/Piano`. Sin git, sin publicar. Módulos 1 y 2.
+- Sin mencionar por César: `area51_tattoo` (publicado en area51-tattoo.vercel.app) y los 4 demos del portafolio actual (gimnasio, legal, restaurante, tienda).
+
+## Ronda 5 — Detalles finales (2026-10-07)
+
+| Tema | Decisión |
+|---|---|
+| Librería de animación | **GSAP** (con su módulo de scroll, ~70 KB). Se carga después del contenido: la página se lee completa aunque la librería tarde o falle. Se desactiva si el teléfono pide menos movimiento. Qué se anima exactamente: pendiente |
+| Etiquetas de tipo | **Cliente real** (Area 51) / **Hecho para mi trabajo** (charcutería) / **Proyecto propio** (Empire Signal, ajedrez, piano) |
+| Vista previa al compartir | **Tarjeta con foto, nombre y frase**, con los colores de Musgo. Se hace cuando César pase la foto |
+| Estadísticas | **Vercel Analytics** (gratis, sin cookies, ~1 KB) |
+| SEO y accesibilidad | Pendiente de confirmar el paquete básico |
+
+## Textos aprobados (2026-10-07)
+
+| Dónde | Texto |
+|---|---|
+| Título de portada | «Hago webs y apps para negocios.» |
+| Presentación | «Soy César, desarrollador. Construyo páginas web y aplicaciones a medida: reservas, inventario, caja o lo que tu negocio necesite.» |
+| Botón principal (abre WhatsApp) | «Escríbeme por WhatsApp» |
+| Mensaje prellenado de WhatsApp | «Hola César, vi tu portafolio y quiero hablar de un proyecto para mi negocio.» |
+| Etiquetas de estado | «En línea» · «En uso en un negocio» · «En desarrollo» |
+| Etiquetas de tipo | «Cliente real» · «Hecho para mi trabajo» · «Proyecto propio» |
+| Habilidades — Interfaz | HTML, CSS, JavaScript, TypeScript, React, Next.js |
+| Habilidades — Servidor | Node.js, Java, Spring Boot |
+| Habilidades — Datos | PostgreSQL, Prisma, Supabase |
+| Habilidades — Otras | Apps instalables que funcionan sin internet, integración de inteligencia artificial, Git, publicación en Vercel |
+
+## Textos aprobados en bloque (2026-10-07, «todo perfecto»)
+
+Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) queda pendiente por el cambio de decisión.
+
+**Botones y menú**
+- Botón secundario de portada: «Ver proyectos»
+- Botones de cada tarjeta: «Ver demo» · «Ver código»
+- Menú: Proyectos · Servicios · Cómo trabajo · Contacto
+
+**Títulos de sección**
+- «Proyectos» · «Qué puedo construir para ti» · «Cómo trabajo» · «Habilidades» · «Hablemos»
+
+**Proyectos**
+- **Empire Signal** — «Analizador lingüístico para estudiantes de inglés y español de nivel B2–C1. Analiza palabras y frases con inteligencia artificial.» · Next.js, React, TypeScript, Prisma, Supabase
+- **Entrenador de ajedrez** — «Juegas contra Stockfish con nivel ajustable y la app clasifica cada jugada tuya al momento, de mejor jugada a error grave, y te explica por qué.» · JavaScript, chess.js, Stockfish
+- **Mostrador** (nombre propuesto para la demo de la charcutería) — «Caja e inventario para un mostrador: ventas por peso o por unidad, control de merma y cuadre de caja al cerrar el turno. Funciona sin internet.» · JavaScript, app instalable
+- **Area 51 Tattoo** — «Página de presentación de un estudio de tatuajes, pensada para el teléfono y para llevar a cada visitante a WhatsApp.» · HTML, CSS, JavaScript
+- **Pididacta** — «Piano en el navegador con un tutor integrado que te guía lección a lección.» · JavaScript, Web Audio
+
+**Qué puedo construir para ti**
+- Páginas web — «La presentación de tu negocio en internet, hecha para verse bien en el teléfono y llevar a tus clientes a WhatsApp.»
+- Reservas y citas — «Tus clientes reservan su turno y tú lo gestionas desde un panel.»
+- Inventario, ventas y caja — «Control de mercancía, ventas y cuadre de caja, también sin internet.»
+- Apps web completas — «Plataformas con cuentas de usuario, base de datos e inteligencia artificial.»
+- Algo a medida — «¿Tu idea no está en la lista? Cuéntamela y vemos cómo hacerla.»
+
+**Cómo trabajo**
+- Presupuesto gratis — «Me cuentas lo que necesitas y te digo qué haría y cuánto cuesta, sin compromiso.»
+- Pago — «Efectivo, transferencia o moneda extranjera. Un anticipo al empezar y el resto al entregar.»
+- Puesta en línea — «Me encargo de publicar tu web o app en internet.»
+- Sin internet — «Si lo necesitas, tu app se instala en el teléfono y sigue funcionando sin conexión.»
+- Mantenimiento — «Sigo disponible después de la entrega. Las condiciones las acordamos según el proyecto.»
+- Inteligencia artificial — «Uso herramientas de inteligencia artificial para avanzar más rápido. Reviso y entiendo cada parte de lo que entrego.»
+
+**Contacto**
+- «Cuéntame qué necesita tu negocio. El presupuesto es gratis.» + botón «Escríbeme por WhatsApp»
+- Pie: «© 2026 César Abraham Hernández»
+
+**Para buscadores y vista previa al compartir**
+- Título: «César Hernández — Webs y apps para negocios»
+- Descripción: «Construyo páginas web y aplicaciones a medida para negocios: reservas, inventario, caja y más.»
+
+## Propuestas técnicas — aprobadas (2026-10-07)
+
+- **Qué se anima (GSAP):** (1) al abrir, una sola entrada orquestada: el título aparece palabra a palabra, la forma de la foto se despliega con rebote y los botones llegan al final; (2) la forma de la foto cambia despacio, como en la muestra; (3) al bajar, la captura del proyecto destacado se desliza dentro de su marco y las demás tarjetas entran una tras otra; (4) los botones responden con un rebote corto al tocarlos. Nada más se mueve.
+- **SEO básico:** título y descripción, mapa del sitio, datos estructurados de persona, dirección canónica.
+- **Accesibilidad:** contraste AA en claro y oscuro, todo usable con teclado, foco visible, texto alternativo en imágenes, animaciones apagadas si el teléfono pide menos movimiento.
+- **Rama:** todo se hace en `v2`; se pasa a `main` cuando César apruebe el resultado.
+
+## Datos que faltan (los da César)
+
+- Foto para el retrato (y para la tarjeta de vista previa).
+- Confirmar que el WhatsApp sigue siendo +53 59522128 y el correo el Gmail actual.
+- Charcutería: se presenta como **«Mostrador»**, tipo **«Proyecto propio»** (confirmado). Falta confirmar su etiqueta de estado.
+- Instagram confirmado: https://www.instagram.com/csarh_hdez
+
+## Trabajo en los proyectos (fuera del portafolio, se hace por partes)
+
+1. Charcutería: publicar la app original en Vercel.
+2. Ajedrez: publicarlo en Vercel.
+3. Piano: crear repo en GitHub y publicarlo en Vercel.
+4. Revisar el historial de cada repo (claves, datos privados) antes de que César los haga públicos.
+5. Generar las 5 capturas en tamaño teléfono.
+
+## Avance de la construcción
+
+- [x] **Parte 1 — Estructura** (2026-10-07): rama `v2`, sitio viejo quitado, Astro 7 instalado, colores y letra de Musgo, `src/data/sitio.js` y `src/data/proyectos.js`. Sin commitear.
+- [x] **Parte 2 — Portada** (2026-10-07): título, retrato (silueta hasta tener foto), presentación y botones. Sin commitear.
+- [ ] Parte 3 — Proyectos
+- [ ] Parte 4 — Qué puedo construir y Cómo trabajo
+- [ ] Parte 5 — Habilidades y Contacto
+- [ ] Parte 6 — Animaciones (GSAP)
+- [ ] Parte 7 — Proyectos externos (publicar charcutería, ajedrez y piano; revisar historiales; capturas)
+- [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel

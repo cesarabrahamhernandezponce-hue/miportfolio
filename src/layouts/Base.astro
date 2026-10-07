@@ -1,0 +1,110 @@
+---
+// Plantilla común: el <head> y la cabecera con el menú.
+import "../styles/global.css";
+import { sitio, secciones } from "../data/sitio.js";
+
+const canonica = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{sitio.titulo}</title>
+    <meta name="description" content={sitio.descripcion} />
+    <link rel="canonical" href={canonica} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <!-- La letra se pide cuanto antes para que el cambio de fuente casi no se note. -->
+    <link rel="preload" href="/fuentes/Gabarito.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="theme-color" content="#f1f5ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d1e17" media="(prefers-color-scheme: dark)" />
+  </head>
+  <body>
+    <a class="boton boton-secundario saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+      <div class="contenedor">
+        <a class="marca" href="/">{sitio.nombreCorto}</a>
+        <nav aria-label="Secciones">
+          <ul>
+            {
+              secciones
+                .filter((s) => s.menu)
+                .map((s) => (
+                  <li>
+                    <a href={`#${s.id}`}>{s.menu}</a>
+                  </li>
+                ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <slot />
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <p>© {new Date().getFullYear()} {sitio.nombre}</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--fondo);
+  }
+
+  .cabecera .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    flex-wrap: wrap;
+    padding-block: 0.625rem;
+  }
+
+  .marca {
+    font-weight: 800;
+    font-size: 1.125rem;
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 0;
+    /* Compensa el relleno del primer enlace para que alinee con el borde. */
+    margin: 0 -0.625rem;
+    padding: 0;
+    list-style: none;
+    /* En teléfonos estrechos el menú se desliza de lado en vez de partirse. */
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.5rem 0.625rem;
+    border-radius: var(--radio-pildora);
+    font-size: 0.875rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  nav a:hover {
+    background: var(--panel);
+  }
+
+  .pie {
+    padding-block: 2rem;
+    color: var(--texto-suave);
+    font-size: 0.9375rem;
+  }
+</style>

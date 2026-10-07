@@ -1,0 +1,135 @@
+---
+// Primera pantalla: título, retrato, presentación y los dos botones.
+import { sitio, enlaceWhatsapp } from "../data/sitio.js";
+
+// Cuando haya foto: guárdala como src/assets/foto.jpg y Astro la recorta y comprime sola.
+// Mientras no exista, se muestra la silueta.
+import { Image } from "astro:assets";
+
+const fotos = import.meta.glob("../assets/foto.{jpg,jpeg,png,webp}", { eager: true });
+const foto = Object.values(fotos)[0]?.default;
+---
+
+<section class="portada" id="portada">
+  <div class="contenedor">
+    <div class="cabeza">
+      <h1>Hago webs y apps para negocios.</h1>
+      <div class="retrato">
+        {
+          foto ? (
+            <Image
+              src={foto}
+              alt={`Retrato de ${sitio.nombre}`}
+              widths={[160, 320, 520]}
+              sizes="(min-width: 48rem) 16rem, 7.5rem"
+              loading="eager"
+              fetchpriority="high"
+            />
+          ) : (
+            <svg viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Aquí irá el retrato">
+              <circle cx="12" cy="9" r="4.5" />
+              <path d="M3 24c0-5.5 4-9 9-9s9 3.500 9 9z" />
+            </svg>
+          )
+        }
+      </div>
+    </div>
+
+    <p class="presentacion">
+      Soy César, desarrollador. Construyo páginas web y aplicaciones a medida: reservas,
+      inventario, caja o lo que tu negocio necesite.
+    </p>
+
+    <div class="botones">
+      <a class="boton boton-principal" href={enlaceWhatsapp} target="_blank" rel="noopener">
+        Escríbeme por WhatsApp
+      </a>
+      <a class="boton boton-secundario" href="#proyectos">Ver proyectos</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portada {
+    padding-block: 2rem 3rem;
+  }
+
+  /* Teléfono: el título a la izquierda y el retrato a su lado, como en la muestra. */
+  .cabeza {
+    display: grid;
+    grid-template-columns: 1fr 7.5rem;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: clamp(2.125rem, 9.6vw, 4.75rem);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+  }
+
+  .retrato {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    display: grid;
+    place-items: end center;
+    background: var(--verde);
+    color: var(--fondo);
+    /* Tres esquinas muy redondas y una casi recta: la forma propia de la página. */
+    border-radius: 3.25rem 3.25rem 0.875rem 3.25rem;
+  }
+
+  .retrato :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .retrato svg {
+    width: 78%;
+    opacity: 0.6;
+  }
+
+  .presentacion {
+    max-width: 34rem;
+    margin-bottom: 1.5rem;
+    color: var(--texto-suave);
+    font-size: 1.1875rem;
+    line-height: 1.45;
+  }
+
+  .botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  /* En pantallas estrechas el botón principal ocupa todo el ancho: más fácil de tocar. */
+  @media (max-width: 26rem) {
+    .botones .boton {
+      flex: 1 1 100%;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .portada {
+      padding-block: 4.5rem 5rem;
+    }
+
+    .cabeza {
+      grid-template-columns: 1fr 16rem;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .retrato {
+      border-radius: 7rem 7rem 1.75rem 7rem;
+    }
+
+    .presentacion {
+      font-size: 1.375rem;
+    }
+  }
+</style>

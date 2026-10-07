@@ -1,0 +1,156 @@
+/* ============================================================
+   Estilos base — dirección «Musgo»
+   Todos los colores y medidas viven aquí como variables.
+   ============================================================ */
+
+@font-face {
+  font-family: "Gabarito";
+  src: url("/fuentes/Gabarito.woff2") format("woff2");
+  font-weight: 400 900;
+  /* swap: el texto se ve al instante con la letra del sistema
+     y cambia a Gabarito cuando termina de descargarse. */
+  font-display: swap;
+}
+
+:root {
+  /* Tema claro */
+  --fondo: #f1f5ec;
+  --texto: #12251c;
+  --texto-suave: #4c6257;
+  --verde: #0b6b4d;
+  --panel: #dde8d6;
+  --naranja: #ff8a1f; /* solo en lo que se toca */
+  --sobre-naranja: #12251c;
+
+  --letra: "Gabarito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ancho: 68rem;
+  --borde: 1.25rem; /* margen lateral en teléfono */
+  --radio: 1.625rem;
+  --radio-pildora: 99rem;
+
+  color-scheme: light dark;
+}
+
+/* Tema oscuro: lo decide el teléfono del visitante, sin botón ni JavaScript. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #0d1e17;
+    --texto: #e6f0e8;
+    --texto-suave: #9db8aa;
+    --verde: #62d6a6;
+    --panel: #173227;
+    --naranja: #ff9d45;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Deja sitio a la cabecera fija al saltar a una sección. */
+  scroll-padding-top: 4.5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--letra);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 800;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho);
+  margin-inline: auto;
+  padding-inline: var(--borde);
+}
+
+.seccion {
+  padding-block: 3.5rem;
+}
+
+.seccion > .contenedor > h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Botones */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem; /* cómodo para el dedo */
+  padding: 0.75rem 1.375rem;
+  border-radius: var(--radio-pildora);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.boton-principal {
+  background: var(--naranja);
+  color: var(--sobre-naranja);
+}
+
+.boton-secundario {
+  background: var(--panel);
+  color: var(--texto);
+}
+
+/* Enlace para saltar el menú con teclado o lector de pantalla. */
+.saltar {
+  position: absolute;
+  left: var(--borde);
+  top: -4rem;
+  z-index: 10;
+}
+
+.saltar:focus {
+  top: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

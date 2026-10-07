@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opciones visuales — portafolio</title>
+<style>
+@font-face { font-family: "Bricolage"; src: url("fuentes/BricolageGrotesque.woff2") format("woff2"); font-weight: 200 800; }
+@font-face { font-family: "Instrument"; src: url("fuentes/InstrumentSans.woff2") format("woff2"); font-weight: 400 700; }
+@font-face { font-family: "Gabarito"; src: url("fuentes/Gabarito.woff2") format("woff2"); font-weight: 400 900; }
+@font-face { font-family: "Unbounded"; src: url("fuentes/Unbounded.woff2") format("woff2"); font-weight: 200 900; }
+@font-face { font-family: "Onest"; src: url("fuentes/Onest.woff2") format("woff2"); font-weight: 100 900; }
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 16px 80px; background: #e9e9ec; color: #1c1c22; font: 16px/1.5 system-ui, sans-serif; }
+.wrap { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 1.5rem; margin: 0 0 8px; }
+.nota { background: #fff; border-radius: 10px; padding: 14px 16px; margin: 0 0 32px; }
+.nota p { margin: 0 0 6px; } .nota p:last-child { margin: 0; }
+.dir { margin: 0 0 56px; }
+.dir > h2 { font-size: 1.3rem; margin: 0 0 4px; }
+.dir > p { margin: 0 0 12px; max-width: 62ch; }
+.ficha { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .85rem; margin: 0 0 16px; align-items: center; }
+.sw { display: inline-flex; align-items: center; gap: 6px; }
+.sw i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.2); display: inline-block; }
+.par { display: flex; flex-wrap: wrap; gap: 20px; }
+.par figure { margin: 0; }
+.par figcaption { font-size: .8rem; margin: 0 0 6px; color: #555; }
+
+/* ---------- teléfono de muestra ---------- */
+.tel { width: 320px; max-width: 100%; border-radius: 28px; overflow: hidden; background: var(--bg); color: var(--ink); border: 6px solid #111; position: relative; }
+.tel .in { padding: 18px 20px 26px; position: relative; }
+.tel .top { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; margin-bottom: 26px; }
+.tel .foto { display: grid; place-items: center; color: var(--ink); }
+.tel .foto svg { width: 60%; opacity: .55; }
+.tel .foto small { position: absolute; bottom: 6px; font-size: .62rem; opacity: .8; }
+.tel h3 { margin: 0; }
+.tel p { margin: 0; }
+.btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { font: inherit; font-weight: 600; font-size: .9rem; padding: 12px 18px; border: 0; cursor: default; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; font-size: .72rem; }
+
+/* ================= A · PLANO ================= */
+.a .tel { font-family: "Instrument", sans-serif; }
+.a .claro  { --bg:#F4F6FB; --ink:#101B3B; --suave:#56618A; --acento:#2747E6; --sobre:#fff; --luz:#FFC83D; --linea:#C9D2EA; }
+.a .oscuro { --bg:#0C1430; --ink:#E9EDFB; --suave:#9AA6D1; --acento:#8098FF; --sobre:#0C1430; --luz:#FFC83D; --linea:#26346B; }
+.a .in { background-image: linear-gradient(var(--linea) 1px, transparent 1px), linear-gradient(90deg, var(--linea) 1px, transparent 1px); background-size: 32px 32px; background-position: -1px -1px; }
+.a .top b { font-family: "Bricolage"; font-weight: 700; font-size: 1rem; }
+.a .foto { width: 132px; height: 156px; background: var(--linea); position: relative; margin-bottom: 20px; }
+.a .foto::before, .a .foto::after { content: ""; position: absolute; width: 14px; height: 14px; border: 2px solid var(--acento); }
+.a .foto::before { top: -7px; left: -7px; border-right: 0; border-bottom: 0; }
+.a .foto::after { bottom: -7px; right: -7px; border-left: 0; border-top: 0; }
+.a h3 { font-family: "Bricolage"; font-weight: 800; font-size: 2.35rem; line-height: .95; letter-spacing: -.03em; font-variation-settings: "opsz" 96; margin-bottom: 12px; }
+.a .pres { color: var(--suave); margin-bottom: 20px; background: var(--bg); }
+.a .btn { border-radius: 4px; }
+.a .b1 { background: var(--acento); color: var(--sobre); }
+.a .b2 { background: var(--bg); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.a .proy { margin-top: 30px; background: var(--bg); border: 1.5px solid var(--ink); padding: 14px; position: relative; }
+.a .proy::before { content: ""; position: absolute; left: -1.5px; top: -1.5px; height: 6px; width: 64px; background: var(--luz); }
+.a .proy h4 { font-family: "Bricolage"; font-weight: 700; font-size: 1.25rem; margin: 6px 0 4px; }
+.a .proy p { font-size: .88rem; color: var(--suave); margin-bottom: 10px; }
+.a .tags span { border: 1px solid var(--linea); padding: 2px 7px; border-radius: 3px; }
+.a .traza { height: 44px; margin-top: 14px; }
+.a .traza path { fill: none; stroke: var(--acento); stroke-width: 2; stroke-dasharray: 520; animation: trazar 3.2s ease-in-out infinite alternate; }
+@keyframes trazar { from { stroke-dashoffset: 520; } to { stroke-dashoffset: 0; } }
+
+/* ================= B · MUSGO ================= */
+.b .tel { font-family: "Gabarito", sans-serif; }
+.b .claro  { --bg:#F1F5EC; --ink:#12251C; --suave:#4C6257; --acento:#0B6B4D; --sobre:#F1F5EC; --luz:#FF8A1F; --panel:#DDE8D6; }
+.b .oscuro { --bg:#0D1E17; --ink:#E6F0E8; --suave:#9DB8AA; --acento:#62D6A6; --sobre:#0D1E17; --luz:#FF9D45; --panel:#173227; }
+.b .top b { font-weight: 800; font-size: 1.05rem; }
+.b .top span { background: var(--panel); padding: 4px 12px; border-radius: 99px; }
+.b .hero { display: grid; grid-template-columns: 1fr 104px; gap: 14px; align-items: end; margin-bottom: 14px; }
+.b .foto { height: 136px; background: var(--acento); color: var(--sobre); border-radius: 52px 52px 14px 52px; position: relative; animation: respirar 4s ease-in-out infinite; }
+@keyframes respirar { 50% { border-radius: 14px 52px 52px 52px; } }
+.b h3 { font-weight: 900; font-size: 2.05rem; line-height: 1; letter-spacing: -.02em; }
+.b .pres { color: var(--suave); font-size: 1.02rem; margin-bottom: 18px; }
+.b .btn { border-radius: 99px; }
+.b .b1 { background: var(--luz); color: #12251C; }
+.b .b2 { background: var(--panel); color: var(--ink); }
+.b .proy { margin-top: 28px; background: var(--panel); border-radius: 26px; padding: 16px; }
+.b .proy h4 { font-weight: 800; font-size: 1.3rem; margin: 0 0 4px; }
+.b .proy p { font-size: .92rem; color: var(--suave); margin-bottom: 10px; }
+.b .tags span { background: var(--bg); padding: 3px 10px; border-radius: 99px; }
+.b .bola { width: 16px; height: 16px; border-radius: 50%; background: var(--luz); margin-top: 16px; animation: rebote 1.6s cubic-bezier(.5,0,.5,1) infinite alternate; }
+@keyframes rebote { to { transform: translateX(230px) scale(1.5); } }
+
+/* ================= C · CARTEL ================= */
+.c .tel { font-family: "Onest", sans-serif; }
+.c .claro  { --bg:#FFFFFF; --ink:#17122B; --suave:#5D5876; --acento:#5A31F4; --sobre:#fff; --luz:#FFB8D2; }
+.c .oscuro { --bg:#130E26; --ink:#F1EEFF; --suave:#A9A3C7; --acento:#A58BFF; --sobre:#130E26; --luz:#FFB8D2; }
+.c .top b { font-family: "Unbounded"; font-weight: 700; font-size: .8rem; }
+.c h3 { font-family: "Unbounded"; font-weight: 800; font-size: 2.1rem; line-height: 1.02; letter-spacing: -.04em; text-transform: lowercase; position: relative; z-index: 1; }
+.c .foto { width: 150px; height: 170px; background: var(--acento); color: #fff; margin: 10px 0 16px auto; position: relative; box-shadow: -14px 14px 0 var(--luz); }
+.c .pres { color: var(--suave); margin-bottom: 18px; }
+.c .btn { border-radius: 0; }
+.c .b1 { background: var(--ink); color: var(--bg); }
+.c .b2 { background: transparent; color: var(--ink); text-decoration: underline; text-underline-offset: 5px; padding-inline: 4px; }
+.c .cinta { margin: 26px -20px 0; background: var(--acento); color: var(--sobre); overflow: hidden; white-space: nowrap; font-family: "Unbounded"; font-weight: 600; font-size: .8rem; padding: 9px 0; }
+.c .cinta span { display: inline-block; animation: correr 9s linear infinite; padding-right: 2em; }
+@keyframes correr { to { transform: translateX(-100%); } }
+.c .proy { margin-top: 24px; border-top: 3px solid var(--ink); padding-top: 12px; }
+.c .proy h4 { font-family: "Unbounded"; font-weight: 700; font-size: 1.1rem; margin: 0 0 6px; }
+.c .proy p { font-size: .9rem; color: var(--suave); margin-bottom: 10px; }
+.c .tags span { background: var(--luz); color: #17122B; padding: 2px 8px; }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Tres direcciones visuales</h1>
+  <div class="nota">
+    <p>Cada dirección se ve como quedaría en un teléfono, en claro y en oscuro.</p>
+    <p><strong>Los textos son de relleno</strong>: los de verdad los escribimos juntos. La silueta ocupa el lugar de tu foto.</p>
+    <p>En cada una se mueve una cosa pequeña: es una muestra del tipo de animación que llevaría.</p>
+  </div>
+
+  <!-- A -->
+  <section class="dir a">
+    <h2>A · Plano</h2>
+    <p>Como el plano de una obra: cuadrícula fina, azul cobalto y marcas de medida. Dice «yo construyo cosas a medida». Las animaciones dibujan líneas y arman las pantallas pieza a pieza.</p>
+    <div class="ficha">
+      <span class="sw"><i style="background:#F4F6FB"></i>#F4F6FB</span>
+      <span class="sw"><i style="background:#101B3B"></i>#101B3B</span>
+      <span class="sw"><i style="background:#2747E6"></i>#2747E6</span>
+      <span class="sw"><i style="background:#FFC83D"></i>#FFC83D</span>
+      <span>Letras: Bricolage Grotesque + Instrument Sans (~55 KB)</span>
+    </div>
+    <div class="par">
+      <figure><figcaption>Claro</figcaption><div class="tel claro"><div class="in">
+        <div class="top"><b>César H.</b><span>Menú</span></div>
+        <div class="foto"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg><small>tu foto</small></div>
+        <h3>César Abraham Hernández</h3>
+        <p class="pres">Aquí va tu presentación corta. Texto de relleno.</p>
+        <div class="btns"><span class="btn b1">Botón principal</span><span class="btn b2">Secundario</span></div>
+        <svg class="traza" viewBox="0 0 280 44"><path d="M2 40h60V8h70v32h50V20h96"/></svg>
+        <div class="proy"><h4>Empire Signal</h4><p>Descripción del proyecto. Texto de relleno.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div></div>
+      </div></div></figure>
+      <figure><figcaption>Oscuro</figcaption><div class="tel oscuro"><div class="in">
+        <div class="top"><b>César H.</b><span>Menú</span></div>
+        <div class="foto"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg><small>tu foto</small></div>
+        <h3>César Abraham Hernández</h3>
+        <p class="pres">Aquí va tu presentación corta. Texto de relleno.</p>
+        <div class="btns"><span class="btn b1">Botón principal</span><span class="btn b2">Secundario</span></div>
+        <svg class="traza" viewBox="0 0 280 44"><path d="M2 40h60V8h70v32h50V20h96"/></svg>
+        <div class="proy"><h4>Empire Signal</h4><p>Descripción del proyecto. Texto de relleno.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div></div>
+      </div></div></figure>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="dir b">
+    <h2>B · Musgo</h2>
+    <p>Verde profundo con un naranja que solo aparece donde hay que tocar. Formas redondas y una sola letra gruesa y amable. Es la más cercana para un dueño de negocio. Las animaciones son elásticas: las formas cambian y rebotan.</p>
+    <div class="ficha">
+      <span class="sw"><i style="background:#F1F5EC"></i>#F1F5EC</span>
+      <span class="sw"><i style="background:#12251C"></i>#12251C</span>
+      <span class="sw"><i style="background:#0B6B4D"></i>#0B6B4D</span>
+      <span class="sw"><i style="background:#FF8A1F"></i>#FF8A1F</span>
+      <span>Letra: Gabarito, una sola familia (~34 KB)</span>
+    </div>
+    <div class="par">
+      <figure><figcaption>Claro</figcaption><div class="tel claro"><div class="in">
+        <div class="top"><b>César H.</b><span>Menú</span></div>
+        <div class="hero"><h3>César Abraham Hernández</h3><div class="foto"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg><small>tu foto</small></div></div>
+        <p class="pres">Aquí va tu presentación corta. Texto de relleno.</p>
+        <div class="btns"><span class="btn b1">Botón principal</span><span class="btn b2">Secundario</span></div>
+        <div class="bola"></div>
+        <div class="proy"><h4>Empire Signal</h4><p>Descripción del proyecto. Texto de relleno.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div></div>
+      </div></div></figure>
+      <figure><figcaption>Oscuro</figcaption><div class="tel oscuro"><div class="in">
+        <div class="top"><b>César H.</b><span>Menú</span></div>
+        <div class="hero"><h3>César Abraham Hernández</h3><div class="foto"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg><small>tu foto</small></div></div>
+        <p class="pres">Aquí va tu presentación corta. Texto de relleno.</p>
+        <div class="btns"><span class="btn b1">Botón principal</span><span class="btn b2">Secundario</span></div>
+        <div class="bola"></div>
+        <div class="proy"><h4>Empire Signal</h4><p>Descripción del proyecto. Texto de relleno.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div></div>
+      </div></div></figure>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="dir c">
+    <h2>C · Cartel</h2>
+    <p>Como un cartel: letras enormes, violeta y rosa, bordes rectos y bloques de color. Es la más atrevida y la que menos se parece a otros portafolios. Las animaciones son de movimiento grande: cintas que corren y paneles que se apilan al bajar.</p>
+    <div class="ficha">
+      <span class="sw"><i style="background:#FFFFFF"></i>#FFFFFF</span>
+      <span class="sw"><i style="background:#17122B"></i>#17122B</span>
+      <span class="sw"><i style="background:#5A31F4"></i>#5A31F4</span>
+      <span class="sw"><i style="background:#FFB8D2"></i>#FFB8D2</span>
+      <span>Letras: Unbounded + Onest (~60 KB)</span>
+    </div>
+    <div class="par">
+      <figure><figcaption>Claro</figcaption><div class="tel claro"><div class="in">
+        <div class="top"><b>césar h.</b><span>Menú</span></div>
+        <h3>César Abraham Hernández</h3>
+        <div class="foto"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg><small>tu foto</small></div>
+        <p class="pres">Aquí va tu presentación corta. Texto de relleno.</p>
+        <div class="btns"><span class="btn b1">Botón principal</span><span class="btn b2">Secundario</span></div>
+        <div class="cinta"><span>texto de relleno que corre — texto de relleno que corre —</span><span>texto de relleno que corre — texto de relleno que corre —</span></div>
+        <div class="proy"><h4>Empire Signal</h4><p>Descripción del proyecto. Texto de relleno.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div></div>
+      </div></div></figure>
+      <figure><figcaption>Oscuro</figcaption><div class="tel oscuro"><div class="in">
+        <div class="top"><b>césar h.</b><span>Menú</span></div>
+        <h3>César Abraham Hernández</h3>
+        <div class="foto"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8" r="4.5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg><small>tu foto</small></div>
+        <p class="pres">Aquí va tu presentación corta. Texto de relleno.</p>
+        <div class="btns"><span class="btn b1">Botón principal</span><span class="btn b2">Secundario</span></div>
+        <div class="cinta"><span>texto de relleno que corre — texto de relleno que corre —</span><span>texto de relleno que corre — texto de relleno que corre —</span></div>
+        <div class="proy"><h4>Empire Signal</h4><p>Descripción del proyecto. Texto de relleno.</p><div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div></div>
+      </div></div></figure>
+    </div>
+  </section>
+</div>
+</body>
+</html>
