@@ -4,6 +4,17 @@ import "../styles/global.css";
 import { sitio, secciones } from "../data/sitio.js";
 
 const canonica = new URL(Astro.url.pathname, Astro.site);
+const tarjeta = new URL("/tarjeta.jpg", Astro.site);
+
+// Datos estructurados: le dicen a Google, en un formato que entiende, quién eres.
+const persona = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: sitio.nombre,
+  url: Astro.site,
+  jobTitle: "Desarrollador",
+  sameAs: [sitio.instagram, sitio.github].filter(Boolean),
+};
 ---
 
 <!doctype html>
@@ -14,6 +25,22 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
     <title>{sitio.titulo}</title>
     <meta name="description" content={sitio.descripcion} />
     <link rel="canonical" href={canonica} />
+
+    <!-- Vista previa al compartir el enlace (WhatsApp, Instagram, etc.). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content={sitio.nombreCorto} />
+    <meta property="og:title" content={sitio.titulo} />
+    <meta property="og:description" content={sitio.descripcion} />
+    <meta property="og:url" content={canonica} />
+    <meta property="og:image" content={tarjeta} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hago webs y apps para negocios. César Hernández" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(persona)} />
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- La letra se pide cuanto antes para que el cambio de fuente casi no se note. -->
     <link rel="preload" href="/fuentes/Gabarito.woff2" as="font" type="font/woff2" crossorigin />
@@ -71,6 +98,15 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
         <p>© {new Date().getFullYear()} {sitio.nombre}</p>
       </div>
     </footer>
+
+    <!--
+      Vercel Analytics: cuenta visitas sin cookies. Solo funciona en el sitio publicado
+      y con Analytics activado en el panel de Vercel; en local este archivo no existe.
+    -->
+    <script is:inline>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script is:inline defer src="/_vercel/insights/script.js"></script>
 
     <!-- Astro lo empaqueta como módulo: se descarga sin frenar la página. -->
     <script>

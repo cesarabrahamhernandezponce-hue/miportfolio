@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cesarhernandez.vercel.app/sitemap.xml

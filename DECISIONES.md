@@ -186,7 +186,12 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
   - [x] Piano: **sin demo** por decisión de César (2026-10-07); en el portafolio solo lleva «Ver código». El despliegue en Vercel queda sin resolver.
   - [ ] Repos públicos: empire-signal, pididacta y area51_tattoo ya lo son; faltan chess_coach y charcuteria.
   - [ ] Poner los enlaces de demo y código definitivos en `src/data/proyectos.js`.
-- [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel
+- [ ] **Parte 8 — Vista previa, SEO y publicación** (2026-10-07)
+  - [x] Tarjeta al compartir: `public/tarjeta.jpg` (1200 × 630, 58 KB), **sin foto por ahora**. Su fuente es `diseno/tarjeta-compartir.html`; se regenera cuando César pase la foto.
+  - [x] Etiquetas Open Graph, datos estructurados de persona, `robots.txt` y `sitemap.xml`.
+  - [x] Contraste comprobado: todas las combinaciones de texto y fondo, en claro y oscuro, superan 4,5:1 (la más baja, 5,2).
+  - [x] Vercel Analytics: script puesto; falta activarlo en el panel de Vercel.
+  - [ ] César: aprobar el resultado, pasar `v2` a `main`, importar en Vercel con el nombre `cesarhernandez` y desactivar GitHub Pages.
 
 ## Notas de César sobre los proyectos (2026-10-07, antes de la Parte 7)
 
