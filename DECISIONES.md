@@ -167,9 +167,9 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
 
 ## Avance de la construcción
 
-- [x] **Parte 1 — Estructura** (2026-10-07): rama `v2`, sitio viejo quitado, Astro 7 instalado, colores y letra de Musgo, `src/data/sitio.js` y `src/data/proyectos.js`. Sin commitear.
-- [x] **Parte 2 — Portada** (2026-10-07): título, retrato (silueta hasta tener foto), presentación y botones. Sin commitear.
-- [ ] Parte 3 — Proyectos
+- [x] **Parte 1 — Estructura** (2026-10-07): rama `v2`, sitio viejo quitado, Astro 7 instalado, colores y letra de Musgo, `src/data/sitio.js` y `src/data/proyectos.js`.
+- [x] **Parte 2 — Portada** (2026-10-07): título, retrato (silueta hasta tener foto), presentación y botones.
+- [x] **Parte 3 — Proyectos** (2026-10-07): tarjetas con Empire Signal destacado y capturas provisionales (pantalla inicial de cada app; las definitivas van en la Parte 7).
 - [ ] Parte 4 — Qué puedo construir y Cómo trabajo
 - [ ] Parte 5 — Habilidades y Contacto
 - [ ] Parte 6 — Animaciones (GSAP)

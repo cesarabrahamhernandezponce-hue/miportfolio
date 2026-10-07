@@ -1,0 +1,43 @@
+---
+// Sección de proyectos: el destacado primero y grande, el resto en lista.
+import Proyecto from "./Proyecto.astro";
+import { proyectos } from "../data/proyectos.js";
+
+const destacado = proyectos.find((p) => p.destacado);
+const resto = proyectos.filter((p) => p !== destacado);
+---
+
+<section class="seccion" id="proyectos">
+  <div class="contenedor">
+    <h2>Proyectos</h2>
+
+    {destacado && <Proyecto proyecto={destacado} />}
+
+    <ul class="lista">
+      {
+        resto.map((p) => (
+          <li>
+            <Proyecto proyecto={p} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .lista {
+    display: grid;
+    gap: 2.25rem;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 48rem) {
+    .lista {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 2.5rem;
+    }
+  }
+</style>

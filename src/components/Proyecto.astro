@@ -1,0 +1,250 @@
+---
+// Una tarjeta de proyecto. La misma plantilla sirve para el destacado y para el resto.
+import { Image } from "astro:assets";
+
+const { proyecto } = Astro.props;
+
+// Busca la captura por su nombre de archivo dentro de src/assets/capturas/.
+const capturas = import.meta.glob("../assets/capturas/*.{png,jpg,jpeg,webp}", { eager: true });
+const captura = capturas[`../assets/capturas/${proyecto.captura}`]?.default;
+
+// El punto del estado va relleno salvo cuando el proyecto aún no está terminado.
+const enCurso = proyecto.estado === "En desarrollo";
+---
+
+<article class:list={["proyecto", { destacado: proyecto.destacado }]}>
+  <div class="marco">
+    {
+      captura ? (
+        <Image
+          src={captura}
+          alt={`Pantalla de ${proyecto.nombre}`}
+          widths={proyecto.destacado ? [280, 390, 560] : [140, 220, 390]}
+          sizes={proyecto.destacado ? "(min-width: 48rem) 17rem, 62vw" : "(min-width: 48rem) 9rem, 6.5rem"}
+          loading={proyecto.destacado ? "eager" : "lazy"}
+        />
+      ) : (
+        <span class="sin-captura">Captura pendiente</span>
+      )
+    }
+  </div>
+
+  <div class="texto">
+    <p class="etiquetas">
+      <span class:list={["estado", { "en-curso": enCurso }]}>{proyecto.estado}</span>
+      <span>{proyecto.tipo}</span>
+    </p>
+    <h3>{proyecto.nombre}</h3>
+    <p class="descripcion">{proyecto.descripcion}</p>
+
+    <ul class="tecnologias" aria-label="Tecnologías">
+      {proyecto.tecnologias.map((t) => <li>{t}</li>)}
+    </ul>
+
+    {
+      (proyecto.demo || proyecto.codigo) && (
+        <div class="enlaces">
+          {proyecto.demo && (
+            <a class="boton boton-demo" href={proyecto.demo} target="_blank" rel="noopener">
+              Ver demo<span class="solo-lector"> de {proyecto.nombre}</span>
+            </a>
+          )}
+          {proyecto.codigo && (
+            <a class="boton boton-codigo" href={proyecto.codigo} target="_blank" rel="noopener">
+              Ver código<span class="solo-lector"> de {proyecto.nombre}</span>
+            </a>
+          )}
+        </div>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  /* ---------- Tarjeta normal: captura pequeña a la izquierda, texto a la derecha ---------- */
+  .proyecto {
+    --tinta: var(--texto);
+    --tinta-suave: var(--texto-suave);
+    --ficha: var(--panel);
+
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 1rem;
+    align-items: start;
+    color: var(--tinta);
+  }
+
+  .marco {
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    border-radius: 1.125rem;
+    background: var(--panel);
+  }
+
+  .marco :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .sin-captura {
+    padding: 0.5rem;
+    font-size: 0.8125rem;
+    text-align: center;
+    color: var(--texto-suave);
+  }
+
+  .etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.125rem 0.875rem;
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--tinta-suave);
+  }
+
+  .estado::before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.375rem;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    background: currentColor;
+  }
+
+  .estado.en-curso::before {
+    background: transparent;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+    font-weight: 800;
+    margin-bottom: 0.375rem;
+  }
+
+  .descripcion {
+    font-size: 1rem;
+    line-height: 1.45;
+    color: var(--tinta-suave);
+    margin-bottom: 0.75rem;
+  }
+
+  .tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin: 0 0 0.875rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.8125rem;
+  }
+
+  .tecnologias li {
+    padding: 0.125rem 0.625rem;
+    border-radius: var(--radio-pildora);
+    background: var(--ficha);
+  }
+
+  .enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .enlaces .boton {
+    min-height: 2.75rem;
+    padding: 0.5rem 1.125rem;
+    font-size: 0.9375rem;
+  }
+
+  .boton-demo {
+    background: var(--verde);
+    color: var(--fondo);
+  }
+
+  .boton-codigo {
+    background: var(--ficha);
+    color: var(--tinta);
+  }
+
+  /* Texto que solo oyen los lectores de pantalla ("Ver demo de Empire Signal"). */
+  .solo-lector {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  /* ---------- Destacado: panel verde, captura grande ---------- */
+  .destacado {
+    --tinta: var(--fondo);
+    --tinta-suave: color-mix(in srgb, var(--fondo) 82%, var(--verde));
+    --ficha: color-mix(in srgb, var(--fondo) 16%, var(--verde));
+
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem 1.25rem 0;
+    border-radius: var(--radio);
+    background: var(--verde);
+    overflow: hidden;
+  }
+
+  .destacado h3 {
+    font-size: clamp(1.875rem, 8vw, 2.75rem);
+    font-weight: 900;
+  }
+
+  .destacado .descripcion {
+    font-size: 1.0625rem;
+  }
+
+  .destacado .boton-demo {
+    background: var(--naranja);
+    color: var(--sobre-naranja);
+  }
+
+  .destacado .boton-demo:focus-visible,
+  .destacado .boton-codigo:focus-visible {
+    outline-color: var(--fondo);
+  }
+
+  /* La captura asoma por abajo del panel, como un teléfono a medio salir. */
+  .destacado .marco {
+    order: 2;
+    width: 62%;
+    aspect-ratio: 9 / 13;
+    margin-inline: auto;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: var(--ficha);
+  }
+
+  @media (min-width: 48rem) {
+    .proyecto {
+      grid-template-columns: 9rem 1fr;
+      gap: 1.5rem;
+    }
+
+    .destacado {
+      grid-template-columns: 1fr 17rem;
+      gap: 2.5rem;
+      align-items: center;
+      padding: 2.5rem 2.5rem 0;
+    }
+
+    .destacado .texto {
+      padding-bottom: 2.5rem;
+    }
+
+    .destacado .marco {
+      width: 100%;
+      align-self: end;
+    }
+  }
+</style>
