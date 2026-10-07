@@ -172,6 +172,6 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
 - [x] **Parte 3 — Proyectos** (2026-10-07): tarjetas con Empire Signal destacado y capturas provisionales (pantalla inicial de cada app; las definitivas van en la Parte 7).
 - [x] **Parte 4 — Qué puedo construir y Cómo trabajo** (2026-10-07): textos en `src/data/servicios.js`.
 - [x] **Parte 5 — Habilidades y Contacto** (2026-10-07): grupos en `src/data/habilidades.js`; contacto con WhatsApp, Instagram, correo y GitHub.
-- [ ] Parte 6 — Animaciones (GSAP)
+- [x] **Parte 6 — Animaciones (GSAP)** (2026-10-07): `src/scripts/animaciones.js`. Peso real: 114 KB (44,5 KB comprimido), GSAP + ScrollTrigger. Si la librería tarda más de 1,5 s, la portada se muestra sin animación.
 - [ ] Parte 7 — Proyectos externos (publicar charcutería, ajedrez y piano; revisar historiales; capturas)
 - [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel

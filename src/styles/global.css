@@ -149,6 +149,11 @@ img {
   top: 0.5rem;
 }
 
+/* Portada oculta solo mientras se prepara su animación de entrada (ver Base.astro). */
+.con-entrada:not(.entrada-lista) [data-entrada] {
+  opacity: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

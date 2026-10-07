@@ -8,13 +8,24 @@ import { Image } from "astro:assets";
 
 const fotos = import.meta.glob("../assets/foto.{jpg,jpeg,png,webp}", { eager: true });
 const foto = Object.values(fotos)[0]?.default;
+
+// El título se parte en palabras para que la animación de entrada las traiga una a una.
+const titulo = "Hago webs y apps para negocios.";
 ---
 
 <section class="portada" id="portada">
   <div class="contenedor">
     <div class="cabeza">
-      <h1>Hago webs y apps para negocios.</h1>
-      <div class="retrato">
+      <h1>
+        {
+          titulo.split(" ").map((palabra) => (
+            <>
+              <span class="palabra" data-entrada>{palabra}</span>{" "}
+            </>
+          ))
+        }
+      </h1>
+      <div class="retrato" data-entrada>
         {
           foto ? (
             <Image
@@ -35,16 +46,16 @@ const foto = Object.values(fotos)[0]?.default;
       </div>
     </div>
 
-    <p class="presentacion">
+    <p class="presentacion" data-entrada>
       Soy César, desarrollador. Construyo páginas web y aplicaciones a medida: reservas,
       inventario, caja o lo que tu negocio necesite.
     </p>
 
     <div class="botones">
-      <a class="boton boton-principal" href={enlaceWhatsapp} target="_blank" rel="noopener">
+      <a class="boton boton-principal" href={enlaceWhatsapp} target="_blank" rel="noopener" data-entrada>
         Escríbeme por WhatsApp
       </a>
-      <a class="boton boton-secundario" href="#proyectos">Ver proyectos</a>
+      <a class="boton boton-secundario" href="#proyectos" data-entrada>Ver proyectos</a>
     </div>
   </div>
 </section>
@@ -79,6 +90,24 @@ const foto = Object.values(fotos)[0]?.default;
     color: var(--fondo);
     /* Tres esquinas muy redondas y una casi recta: la forma propia de la página. */
     border-radius: 3.25rem 3.25rem 0.875rem 3.25rem;
+  }
+
+  /* inline-block: una palabra solo se puede mover si es una caja, no texto corrido. */
+  .palabra {
+    display: inline-block;
+  }
+
+  /* La forma del retrato cambia despacio. Es CSS puro: no depende de la librería. */
+  @media (prefers-reduced-motion: no-preference) {
+    .retrato {
+      animation: respirar 7s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes respirar {
+    to {
+      border-radius: 0.875rem 3.25rem 3.25rem 3.25rem;
+    }
   }
 
   .retrato :global(img) {
@@ -126,6 +155,13 @@ const foto = Object.values(fotos)[0]?.default;
 
     .retrato {
       border-radius: 7rem 7rem 1.75rem 7rem;
+      animation-name: respirar-grande;
+    }
+
+    @keyframes respirar-grande {
+      to {
+        border-radius: 1.75rem 7rem 7rem 7rem;
+      }
     }
 
     .presentacion {

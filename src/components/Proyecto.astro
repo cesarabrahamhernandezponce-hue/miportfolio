@@ -223,6 +223,12 @@ const enCurso = proyecto.estado === "En desarrollo";
     margin-inline: auto;
     border-radius: 1.5rem 1.5rem 0 0;
     background: var(--ficha);
+    place-items: start center;
+  }
+
+  /* La captura queda más alta que su marco: al bajar por la página se desliza dentro de él. */
+  .destacado .marco :global(img) {
+    height: auto;
   }
 
   @media (min-width: 48rem) {

@@ -19,6 +19,26 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
     <link rel="preload" href="/fuentes/Gabarito.woff2" as="font" type="font/woff2" crossorigin />
     <meta name="theme-color" content="#f1f5ec" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d1e17" media="(prefers-color-scheme: dark)" />
+
+    <!--
+      Va en línea y antes del contenido para que no haya parpadeo: marca la página como
+      "con entrada" y el CSS oculta la portada hasta que la animación esté lista.
+      Si la librería tarda más de 1,5 s (internet lento) o falla, la portada se muestra
+      sin animación. Si el teléfono pide menos movimiento, no se hace nada.
+    -->
+    <script is:inline>
+      (function () {
+        var h = document.documentElement;
+        if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        h.classList.add("con-entrada");
+        setTimeout(function () {
+          if (!h.classList.contains("entrada-lista")) {
+            window.entradaVencida = true;
+            h.classList.add("entrada-lista");
+          }
+        }, 1500);
+      })();
+    </script>
   </head>
   <body>
     <a class="boton boton-secundario saltar" href="#contenido">Saltar al contenido</a>
@@ -51,6 +71,11 @@ const canonica = new URL(Astro.url.pathname, Astro.site);
         <p>© {new Date().getFullYear()} {sitio.nombre}</p>
       </div>
     </footer>
+
+    <!-- Astro lo empaqueta como módulo: se descarga sin frenar la página. -->
+    <script>
+      import "../scripts/animaciones.js";
+    </script>
   </body>
 </html>
 
