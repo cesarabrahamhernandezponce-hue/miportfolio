@@ -1,0 +1,71 @@
+---
+// «Qué puedo construir para ti»: una lista en letra grande, sin cajas.
+import { servicios } from "../data/servicios.js";
+---
+
+<section class="seccion" id="servicios">
+  <div class="contenedor">
+    <h2>Qué puedo construir para ti</h2>
+
+    <!-- <dl> es la etiqueta de HTML para parejas de término y explicación. -->
+    <dl class="servicios">
+      {
+        servicios.map((s) => (
+          <div class="servicio">
+            <dt>{s.titulo}</dt>
+            <dd>{s.texto}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>
+
+<style>
+  .servicios {
+    margin: 0;
+  }
+
+  .servicio {
+    padding-block: 1.125rem;
+    border-top: 2px solid var(--panel);
+  }
+
+  .servicio:last-child {
+    border-bottom: 2px solid var(--panel);
+  }
+
+  dt {
+    font-size: clamp(1.5rem, 6.4vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--verde);
+    margin-bottom: 0.375rem;
+  }
+
+  dd {
+    margin: 0;
+    max-width: 36rem;
+    color: var(--texto-suave);
+  }
+
+  /* Escritorio: el título a la izquierda y la explicación a su lado. */
+  @media (min-width: 48rem) {
+    .servicio {
+      display: grid;
+      grid-template-columns: 5fr 6fr;
+      gap: 2rem;
+      align-items: baseline;
+      padding-block: 1.5rem;
+    }
+
+    dt {
+      margin-bottom: 0;
+    }
+
+    dd {
+      font-size: 1.125rem;
+    }
+  }
+</style>
