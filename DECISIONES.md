@@ -173,7 +173,18 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
 - [x] **Parte 4 — Qué puedo construir y Cómo trabajo** (2026-10-07): textos en `src/data/servicios.js`.
 - [x] **Parte 5 — Habilidades y Contacto** (2026-10-07): grupos en `src/data/habilidades.js`; contacto con WhatsApp, Instagram, correo y GitHub.
 - [x] **Parte 6 — Animaciones (GSAP)** (2026-10-07): `src/scripts/animaciones.js`. Peso real: 114 KB (44,5 KB comprimido), GSAP + ScrollTrigger. Si la librería tarda más de 1,5 s, la portada se muestra sin animación.
-- [ ] Parte 7 — Proyectos externos (publicar charcutería, ajedrez y piano; revisar historiales; capturas)
+- [ ] **Parte 7 — Proyectos externos** (en curso, 2026-10-07)
+  - [x] Historiales revisados (ver tabla arriba).
+  - [x] Empire Signal: «En desarrollo» y sin demo hasta que César lo arregle (sigue destacado).
+  - [x] Ajedrez: `main` adelantada hasta `feat/ensenar-aperturas` (local, sin pushear).
+  - [x] Charcutería: `fotos/` y `CLAUDE.md` fuera del repo desde el último commit (siguen en la máquina y **siguen en el historial anterior**).
+  - [x] Area 51: `node_modules/` fuera del repo (local, sin pushear).
+  - [x] Piano: repo git creado en local, primer commit hecho.
+  - [x] Capturas definitivas: ajedrez (pantalla «Nueva partida») y Mostrador (turno abierto con productos de ejemplo). Empire Signal, Area 51 y piano conservan la de su pantalla inicial.
+  - [ ] César: crear el repo del piano en GitHub y hacer los push.
+  - [ ] César: importar ajedrez, Mostrador y piano en Vercel.
+  - [ ] César: hacer públicos los repos.
+  - [ ] Poner los enlaces de demo y código definitivos en `src/data/proyectos.js`.
 - [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel
 
 ## Notas de César sobre los proyectos (2026-10-07, antes de la Parte 7)
