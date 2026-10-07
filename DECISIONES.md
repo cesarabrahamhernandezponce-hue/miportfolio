@@ -181,9 +181,10 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
   - [x] Area 51: `node_modules/` fuera del repo (local, sin pushear).
   - [x] Piano: repo git creado en local, primer commit hecho.
   - [x] Capturas definitivas: ajedrez (pantalla «Nueva partida») y Mostrador (turno abierto con productos de ejemplo). Empire Signal, Area 51 y piano conservan la de su pantalla inicial.
-  - [ ] César: crear el repo del piano en GitHub y hacer los push.
-  - [ ] César: importar ajedrez, Mostrador y piano en Vercel.
-  - [ ] César: hacer públicos los repos.
+  - [x] César: repo `pididacta` creado y subido.
+  - [x] Ajedrez en https://chesscoach-drab.vercel.app y Mostrador en https://charcuteria-seven.vercel.app (ambos responden).
+  - [ ] Piano: el proyecto existe en Vercel pero no tiene ningún despliegue válido (DEPLOYMENT_NOT_FOUND). Añadido `vercel.json` (publicar `app/`); falta que César deje vacío el Root Directory y haga push.
+  - [ ] Repos públicos: empire-signal, pididacta y area51_tattoo ya lo son; faltan chess_coach y charcuteria.
   - [ ] Poner los enlaces de demo y código definitivos en `src/data/proyectos.js`.
 - [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel
 

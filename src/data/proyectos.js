@@ -36,7 +36,7 @@ export const proyectos = [
     tipo: "Proyecto propio",
     tecnologias: ["JavaScript", "chess.js", "Stockfish"],
     captura: "ajedrez.png",
-    demo: "", // PENDIENTE: publicar en Vercel
+    demo: "https://chesscoach-drab.vercel.app",
     codigo: "https://github.com/cesarabrahamhernandezponce-hue/chess_coach",
   },
   {
@@ -47,7 +47,7 @@ export const proyectos = [
     tipo: "Proyecto propio",
     tecnologias: ["JavaScript", "App instalable"],
     captura: "charcuteria.png",
-    demo: "", // PENDIENTE: publicar en Vercel
+    demo: "https://charcuteria-seven.vercel.app",
     codigo: "https://github.com/cesarabrahamhernandezponce-hue/charcuteria",
   },
   {
@@ -70,6 +70,6 @@ export const proyectos = [
     tecnologias: ["JavaScript", "Web Audio"],
     captura: "piano.png",
     demo: "", // PENDIENTE: publicar en Vercel
-    codigo: "", // PENDIENTE: crear repo en GitHub
+    codigo: "https://github.com/cesarabrahamhernandezponce-hue/pididacta",
   },
 ];
