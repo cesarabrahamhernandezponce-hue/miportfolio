@@ -191,7 +191,12 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
   - [x] Etiquetas Open Graph, datos estructurados de persona, `robots.txt` y `sitemap.xml`.
   - [x] Contraste comprobado: todas las combinaciones de texto y fondo, en claro y oscuro, superan 4,5:1 (la más baja, 5,2).
   - [x] Vercel Analytics: script puesto; falta activarlo en el panel de Vercel.
-  - [ ] César: aprobar el resultado, pasar `v2` a `main`, importar en Vercel con el nombre `cesarhernandez` y desactivar GitHub Pages.
+  - [x] Publicado en **https://cesarhernandez.vercel.app** (verificado el 2026-10-07: página, tarjeta y mapa del sitio responden). `v2` ya está en `main`.
+  - [x] Empire Signal arreglado por César: vuelve a «En línea» con demo. Los cinco repos son públicos.
+  - [x] Charcutería: push forzado hecho; `fotos/` y `CLAUDE.md` ya no están en el repo ni en su historial. **Los commits viejos siguen accesibles en GitHub por identificador directo** (verificado); solo se eliminan del todo borrando y recreando el repo, o pidiéndolo a GitHub.
+  - [ ] César: `git push origin main` para publicar el cambio de Empire Signal.
+  - [ ] César: activar Analytics en Vercel (el script aún da 404) y desactivar GitHub Pages (sigue activo).
+  - [ ] Foto de César: retrato (`src/assets/foto.jpg`) y tarjeta al compartir.
 
 ## Notas de César sobre los proyectos (2026-10-07, antes de la Parte 7)
 
