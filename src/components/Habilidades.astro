@@ -1,0 +1,70 @@
+---
+// «Habilidades»: cuatro grupos, cada uno con su lista.
+import { habilidades } from "../data/habilidades.js";
+---
+
+<section class="seccion" id="habilidades">
+  <div class="contenedor">
+    <h2>Habilidades</h2>
+
+    <div class="grupos">
+      {
+        habilidades.map((g) => (
+          <div class="grupo">
+            <h3>{g.grupo}</h3>
+            <ul>
+              {g.lista.map((h) => <li>{h}</li>)}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .grupos {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--texto-suave);
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 0.375rem 0.875rem;
+    /* Radio fijo: si el texto ocupa dos líneas, la ficha no se deforma. */
+    border-radius: 1.125rem;
+    background: var(--panel);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  /* Escritorio: el nombre del grupo a la izquierda, su lista a la derecha. */
+  @media (min-width: 48rem) {
+    .grupo {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+</style>

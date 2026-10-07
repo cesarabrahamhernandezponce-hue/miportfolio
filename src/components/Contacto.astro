@@ -1,0 +1,98 @@
+---
+// «Hablemos»: el cierre de la página. WhatsApp es el botón principal; el resto, enlaces.
+import { sitio, enlaceWhatsapp } from "../data/sitio.js";
+
+// Solo se muestran los canales que tengan dato en src/data/sitio.js.
+const otros = [
+  { nombre: "Instagram", enlace: sitio.instagram },
+  { nombre: "Correo", enlace: sitio.correo && `mailto:${sitio.correo}` },
+  { nombre: "GitHub", enlace: sitio.github },
+].filter((c) => c.enlace);
+---
+
+<section class="seccion" id="contacto">
+  <div class="contenedor">
+    <div class="panel">
+      <h2>Hablemos</h2>
+      <p class="texto">Cuéntame qué necesita tu negocio. El presupuesto es gratis.</p>
+
+      <a class="boton boton-principal" href={enlaceWhatsapp} target="_blank" rel="noopener">
+        Escríbeme por WhatsApp
+      </a>
+
+      <ul class="otros">
+        {
+          otros.map((c) => (
+            <li>
+              <a href={c.enlace} target={c.enlace.startsWith("mailto:") ? undefined : "_blank"} rel="noopener">
+                {c.nombre}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .panel {
+    padding: 2.25rem 1.25rem;
+    border-radius: var(--radio);
+    background: var(--verde);
+    color: var(--fondo);
+  }
+
+  h2 {
+    font-size: clamp(2.75rem, 14vw, 5.5rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.875rem;
+  }
+
+  .texto {
+    max-width: 26rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1875rem;
+    line-height: 1.4;
+  }
+
+  .boton-principal {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .otros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    margin: 1.25rem 0 0 -0.75rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .otros a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 0.75rem;
+    border-radius: var(--radio-pildora);
+    font-weight: 700;
+    text-underline-offset: 0.25em;
+  }
+
+  .panel a:focus-visible {
+    outline-color: var(--fondo);
+  }
+
+  @media (min-width: 48rem) {
+    .panel {
+      padding: 4rem 3rem;
+    }
+
+    .texto {
+      font-size: 1.375rem;
+    }
+  }
+</style>

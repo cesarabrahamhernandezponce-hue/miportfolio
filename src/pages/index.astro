@@ -1,11 +1,12 @@
 ---
-// Página única. Cada sección se irá sustituyendo por su componente.
+// Página única: cada sección es un componente, en el orden en que se ve.
 import Base from "../layouts/Base.astro";
 import Portada from "../components/Portada.astro";
 import Proyectos from "../components/Proyectos.astro";
 import Servicios from "../components/Servicios.astro";
 import ComoTrabajo from "../components/ComoTrabajo.astro";
-import { secciones } from "../data/sitio.js";
+import Habilidades from "../components/Habilidades.astro";
+import Contacto from "../components/Contacto.astro";
 ---
 
 <Base>
@@ -13,24 +14,6 @@ import { secciones } from "../data/sitio.js";
   <Proyectos />
   <Servicios />
   <ComoTrabajo />
-
-  {
-    secciones.filter((s) => ["habilidades", "contacto"].includes(s.id)).map((s) => (
-      <section class="seccion" id={s.id}>
-        <div class="contenedor">
-          <h2>{s.titulo}</h2>
-          <p class="hueco">Sección en construcción.</p>
-        </div>
-      </section>
-    ))
-  }
+  <Habilidades />
+  <Contacto />
 </Base>
-
-<style>
-  .hueco {
-    padding: 1.25rem;
-    border-radius: var(--radio);
-    background: var(--panel);
-    color: var(--texto-suave);
-  }
-</style>

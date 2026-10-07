@@ -171,7 +171,7 @@ Excepción: lo referido a la charcutería (nombre «Mostrador», etiquetas) qued
 - [x] **Parte 2 — Portada** (2026-10-07): título, retrato (silueta hasta tener foto), presentación y botones.
 - [x] **Parte 3 — Proyectos** (2026-10-07): tarjetas con Empire Signal destacado y capturas provisionales (pantalla inicial de cada app; las definitivas van en la Parte 7).
 - [x] **Parte 4 — Qué puedo construir y Cómo trabajo** (2026-10-07): textos en `src/data/servicios.js`.
-- [ ] Parte 5 — Habilidades y Contacto
+- [x] **Parte 5 — Habilidades y Contacto** (2026-10-07): grupos en `src/data/habilidades.js`; contacto con WhatsApp, Instagram, correo y GitHub.
 - [ ] Parte 6 — Animaciones (GSAP)
 - [ ] Parte 7 — Proyectos externos (publicar charcutería, ajedrez y piano; revisar historiales; capturas)
 - [ ] Parte 8 — Vista previa al compartir, SEO y publicación en Vercel
